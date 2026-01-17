@@ -1,7 +1,7 @@
 @import './base.css';
 @import './variable.css';
 @import './component.css';
-@import './pages/buyers.css';
+@import './pages/home.css';
 
 @font-face {
   font-family: 'SF Pro Display';
