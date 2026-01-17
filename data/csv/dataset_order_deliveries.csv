@@ -1,0 +1,11 @@
+Delivery Code,Order Code,Delivered On,HLR Result,LLV Result,Criteria Met,Status,Retry Count,Dispute Reason,API Code,Forwarding Status,Forwarding Notes
+TMP8259102,LLO100001,2024-11-27T16:00:00Z,Yes,Yes,true,accepted,0,Not Disputed,200,success,
+TMP84404103,LLO100001,2024-11-26T17:29:00Z,Yes,Yes,true,accepted,1,Not Disputed,200,success,
+TMP19249104,LLO100001,2024-11-26T17:28:00Z,Yes,N/A,true,accepted,0,Not Disputed,200,success,
+TMP10715105,LLO100002,2024-06-15T08:45:00Z,No,Yes,true,rejected,1,HLR failed,503,fail,Retry initiated with seller.
+TMP25105107,LLO100002,2024-06-16T11:20:00Z,Yes,Yes,true,rejected,2,Out of criteria,200,success,
+TMP80375108,LLO100003,2024-04-02T09:10:00Z,Yes,N/A,true,accepted,0,Under Review,422,fail,Awaiting compliance approval.
+TMP42991110,LLO100004,2024-09-12T14:05:00Z,Yes,No,false,disputed,0,Out of criteria,200,success,Buyer flagged regional mismatch.
+TMP90716106,LLO100001,2024-11-26T17:26:00Z,N/A,Yes,true,accepted,0,Not Disputed,200,success,
+TMP42991111,LLO100004,2024-09-13T15:10:00Z,Yes,Yes,true,accepted,0,Not Disputed,200,success,
+TMP62911112,LLO100004,2024-09-14T16:30:00Z,Yes,Yes,true,accepted,1,Not Disputed,200,pending,Forwarding retry scheduled.

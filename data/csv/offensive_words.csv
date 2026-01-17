@@ -1,0 +1,6 @@
+Word,Severity,Active,Added Date,Usage Count,Description,Created By User ID
+"spammy phrase",LOW,True,2024-02-15T10:30:00Z,5,"Flagged by QA review",1
+"offensive term",HIGH,True,2024-03-02T14:45:00Z,12,"Escalated to compliance",2
+"inappropriate content",MEDIUM,True,2024-03-18T09:20:00Z,8,"Detected in recent reviews",3
+"violent threat",CRITICAL,True,2024-03-25T16:05:00Z,3,"Reported by moderation queue",4
+"discriminatory slur",HIGH,False,2024-04-01T11:40:00Z,0,"Deprecated after policy update",5

@@ -1,0 +1,133 @@
+{
+    "user.create": {
+        "prompt": "I need the user name (not upper case but capitalized - e.g. 'John Doe'), user email (e.g. 'john.doe@example.com') and user phone (e.g. '1234567890') from the prompt.",
+        "dirty_fields": {
+            "name": "str",
+            "email": "str",
+            "phone": "str"
+        },
+        "clean_fields": {
+            "name": "str",
+            "email": "str",
+            "phone": "str"
+        }
+    },
+    "user.activate": {
+        "prompt": "I need the existing user name (not upper case but capitalized - e.g. 'John Doe') and user email (e.g. 'john.doe@example.com') from the prompt.",
+        "dirty_fields": {
+            "user": "str"
+        },
+        "clean_fields": {
+            "id_user": "int"
+        }
+    },
+    "user.deactivate": {
+        "prompt": "I need the existing user name (not upper case but capitalized - e.g. 'John Doe') and user email (e.g. 'john.doe@example.com') from the prompt.",
+        "dirty_fields": {
+            "user": "str"
+        },
+        "clean_fields": {
+            "id_user": "int"
+        }
+    },
+    "warehouse.create": {
+        "prompt": "I need the warehouse name (not upper case but capitalized - e.g. 'Westside warehouse') and warehouse token (snake_cased version of the name) from the prompt.",
+        "dirty_fields": {
+            "name": "str",
+            "token": "str"
+        },
+        "clean_fields": {
+            "name": "str",
+            "token": "str"
+        }
+    },
+    "warehouse.update": {
+        "prompt": "I need the existing warehouse name (single word - e.g. 'westside'), warehouse name (not upper case but capitalized - e.g. 'Westside warehouse') and warehouse token (snake_cased version of the name) from the prompt.",
+        "dirty_fields": {
+            "warehouse": "str",
+            "name": "str",
+            "token": "str"
+        },
+        "clean_fields": {
+            "id_warehouse": "int",
+            "name": "str",
+            "token": "str"
+        }
+    },
+    "warehouse.delete": {
+        "prompt": "I need the existing warehouse name (single word - e.g. 'westside') from the prompt.",
+        "dirty_fields": {
+            "warehouse": "str"
+        },
+        "clean_fields": {
+            "id_warehouse": "int"
+        }
+    },
+    "purchase_order.create": {
+        "prompt": "I need the purchase order name (not upper case but capitalized - e.g. 'Westside purchase order') and purchase order token (snake_cased version of the name) from the prompt.",
+        "dirty_fields": {
+            "name": "str",
+            "token": "str"
+        },
+        "clean_fields": {
+            "name": "str",
+            "token": "str"
+        }
+    },
+    "purchase_order.approve": {
+        "prompt": "I need the existing purchase order name (single word - e.g. 'westside') from the prompt.",
+        "dirty_fields": {
+            "purchase_order": "str"
+        },
+        "clean_fields": {
+            "id_purchase_order": "int"
+        }
+    },
+    "purchase_order.reject": {
+        "prompt": "I need the existing purchase order name (single word - e.g. 'westside') from the prompt.",
+        "dirty_fields": {
+            "purchase_order": "str"
+        },
+        "clean_fields": {
+            "id_purchase_order": "int"
+        }
+    },
+    "supplier.create": {
+        "prompt": "I need the supplier name (not upper case but capitalized - e.g. 'Westside supplier'), supplier email (e.g. 'westside@example.com') and supplier phone (e.g. '1234567890') from the prompt.",
+        "dirty_fields": {
+            "name": "str",
+            "email": "str",
+            "phone": "str"
+        },
+        "clean_fields": {
+            "name": "str",
+            "email": "str",
+            "phone": "str"
+        }
+    },
+    "supplier.update": {
+        "prompt": "I need the existing supplier name (single word - e.g. 'westside'), supplier name (not upper case but capitalized - e.g. 'Westside supplier'), supplier email (e.g. 'westside@example.com') and supplier phone (e.g. '1234567890') from the prompt.",
+        "dirty_fields": {
+            "supplier": "str",
+            "name": "str",
+            "email": "str",
+            "phone": "str"
+        },
+        "clean_fields": {
+            "id_supplier": "int",
+            "name": "str",
+            "email": "str",
+            "phone": "str"
+        }
+    },
+    "supplier.delete": {
+        "prompt": "I need the existing supplier name (single word - e.g. 'westside') from the prompt.",
+        "dirty_fields": {
+            "supplier": "str"
+        },
+        "clean_fields": {
+            "id_supplier": "int"
+        }
+    },
+    "unknown": {}
+}

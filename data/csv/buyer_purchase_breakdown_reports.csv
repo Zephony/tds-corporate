@@ -1,0 +1,4 @@
+ID Buyer,User Name,User Email,Signed Up Date,Solar Leads,Finance Leads,Home Improvement,Others,Status
+1,Jane Smith,jane.smith@example.com,2022-04-15T10:30:00Z,18,9,6,9,active
+2,Carlos Gomez,carlos.gomez@example.com,2023-01-05T08:10:00Z,6,4,5,3,expansion
+3,Liu Wei,liu.wei@example.com,2021-09-12T07:20:00Z,12,7,4,4,watchlist

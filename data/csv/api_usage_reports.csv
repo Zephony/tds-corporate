@@ -1,0 +1,4 @@
+ID User,User Name,User Email,Total API Calls,Successful Calls,Failed Calls,Success Rate(%),Most Common Error,Status
+1,Albus,albus@local,125000,123200,1800,98.5%,Timeout,scaled
+2,Ron,ron@local,84000,79900,4100,95.1%,Invalid Payload,watchlist
+3,Harry,harry@local,97000,95050,1950,97.9%,Auth Failure,active

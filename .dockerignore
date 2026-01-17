@@ -1,0 +1,39 @@
+# General
+.git
+.gitignore
+.DS_Store
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+.env
+.env.*
+
+# Python
+venv*/
+venv-new/
+.venv/
+
+# Node
+node_modules/
+frontend/node_modules/
+admin-frontend/node_modules/
+frontend/.next/
+
+# Build and runtime artifacts
+uploads/
+trash/
+ssl/
+
+# Large data artifacts not needed in Docker build context
+data/arabic_ocr_base_data.xlsx
+
+# Docker
+**/Dockerfile*
+**/.dockerignore
+
+# Editors
+.vscode/
+.idea/

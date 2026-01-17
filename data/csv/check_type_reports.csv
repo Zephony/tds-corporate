@@ -1,0 +1,4 @@
+Check Type,Total Checks,Successful Checks,Failed Checks,Success Rate(%),Most Common Error,Status
+HLR,5200,5050,150,97.1%,Timeout,healthy
+LLV,4800,4625,175,96.4%,Carrier Reject,healthy
+KYC,3100,2870,230,92.6%,Document Blur,review

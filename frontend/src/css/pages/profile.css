@@ -1,0 +1,162 @@
+.profile-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+
+  padding: 20px;
+
+  background-color: var(--white-bg);
+  border-radius: 12px;
+
+  .profile-container-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    z-index: 0;
+
+    .profile-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .profile-header {
+        font-size: 0.9em;
+        font-weight: 600;
+        color: var(--font-color);
+      }
+
+      .profile-content {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+        .profile-edit-wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          .edit-section {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        
+            width: 100%;
+
+            .input-label {
+              font-size: 0.9em;
+              font-weight: 400;
+              color: var(--font-sub-text) ;
+            }
+        
+            .input-element-wrapper {
+              display: flex;
+
+              padding-top: 5px;
+              width: 205px;
+        
+              .input {
+                border-radius: 8px;
+                padding: 10px 0px 10px 15px;
+                border: 1px solid var(--search-border);
+        
+              }
+            }
+          }
+        }
+      }
+
+      .profile-action-btn {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+        .save-button {
+          padding: 10px 20px;
+          background-color: var(--font-blue-color);
+          border-radius: 10px;
+          border: none;
+          color: var(--white-bg);
+          cursor: pointer;
+        }
+      }
+    }
+
+    .locked {
+      opacity: 0.1;
+      pointer-events: none;
+    }
+  }
+
+  .locked-container-wrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    width: 100%;
+
+    z-index: 10;
+
+    .locked-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      img {}
+
+      .locked-text {
+        font-size: 0.9em;
+        font-weight: 600;
+        color: var(--font-color);
+      }
+
+      .locked-action-btn {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+        .edit-section {
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+
+          width: 100%;
+
+          .input-element-wrapper {
+            display: flex;
+            width: 205px;
+        
+            .input {
+              border-radius: 8px;
+              padding: 10px 0px 10px 15px;
+              border: 1px solid var(--search-border);
+        
+            }
+          }
+        }
+
+        .unlock-button {
+          padding: 10px 20px;
+          background-color: var(--font-blue-color);
+          border-radius: 10px;
+          border: none;
+          color: var(--white-bg);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+

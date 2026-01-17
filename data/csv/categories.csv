@@ -1,0 +1,15 @@
+Category Name,Data Type,Status,Icon ID
+Advertising Data,Consumer,active,1
+Demographics Data,Consumer,active,2
+Energy & Utilities,Consumer,active,3
+Financial Services,Consumer,active,4
+Healthcare,Consumer,active,5
+Retail & E-commerce,Consumer,active,6
+Transportation,Consumer,active,7
+Entertainment & Media,Consumer,active,8
+B2B Services,Business,active,9
+Enterprise Solutions,Business,active,10
+Supply Chain,Business,active,11
+Marketing Analytics,Business,active,12
+Professional Services,Business,active,13
+Technology Solutions,Business,active,14

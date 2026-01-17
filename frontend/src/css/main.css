@@ -1,0 +1,91 @@
+@import './base.css';
+@import './variable.css';
+@import './component.css';
+@import './pages/buyers.css';
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('/static/sf-pro-display/SFPRODISPLAYBLACKITALIC.OTF') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('/static/sf-pro-display/SFPRODISPLAYBOLD.OTF') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('/static/sf-pro-display/SFPRODISPLAYLIGHTITALIC.OTF') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+body {
+  padding: 0px 0px;
+  margin: 0px 0px;
+
+  height: 100vh;
+  font-family: -apple-system,
+    BlinkMacSystemFont,
+    ‘Segoe UI’,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    ‘Helvetica Neue’,
+    sans-serif;
+}
+
+.main {
+  box-sizing: border-box;
+}
+
+.page-container {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: 30px;
+
+  height: 100vh;
+
+  background-color: var(--main-bg-color);
+  overflow: auto;
+  scrollbar-width: none;
+  box-sizing: border-box;
+  
+  .left-container {
+    position: sticky;
+    top: 0px;
+    /* border: 5px solid violet; */
+    height: 100vh;
+  }
+  
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+    margin: 20px;
+
+    background-color: var(--main-bg-color);
+    /* border: 5px solid green; */
+
+    .main-content-body {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}
+
+.table-wrapper {
+  height: fit-content;
+
+  .table-container {
+    height: fit-content;
+    overflow-y: visible;
+  }
+}

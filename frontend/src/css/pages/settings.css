@@ -1,0 +1,37 @@
+.table-body-data {
+  .activity-log-date {
+      font-size: 0.75em;
+      font-weight: 400;
+      color: #000;
+  }
+}
+.table-body-data {
+  .activity-log-login {
+    font-size: 0.75em;
+    font-weight: 400;
+    color: #000;
+  }
+}
+
+.table-body-data {
+  .activity-log-logout {
+    font-size: 0.75em;
+    font-weight: 400;
+    color: #000;
+  }
+}
+
+.table-body-data {
+  .activity-log-duration {
+    font-size: 0.75em;
+    font-weight: 400;
+    color: #000;
+  }
+}
+
+.section-title {
+  font-size: 0.7em;
+  font-weight: 400;
+  color: var(--font-color);
+  padding: 15px 0px;
+}

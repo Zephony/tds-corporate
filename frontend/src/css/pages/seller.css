@@ -1,0 +1,16 @@
+.rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  
+  .star-icon {
+    width: 15px;
+    height: 15px;
+
+  }
+}
+
+.performance-wrapper {
+  padding-top: 15px;
+}

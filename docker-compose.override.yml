@@ -1,0 +1,62 @@
+# Production overrides - extends the base docker-compose.yml
+# Usage: docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/frontend/Dockerfile
+      target: dev
+    environment:
+      - NODE_ENV=development
+      - NEXT_TELEMETRY_DISABLED=1
+      - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL:-http://localhost:9999/api}
+      - NODE_PATH=/app/node_modules
+      - PATH=/app/node_modules/.bin:$PATH
+      - WATCHPACK_POLLING=true
+      - CHOKIDAR_USEPOLLING=true
+      - WEBPACK_DEV_SERVER_POLLING=true
+    ports:
+      - "3000:8081"
+    restart: unless-stopped
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+      - ./static:/app/public/static
+      - /app/node_modules
+
+  backend:
+    ports:
+      - "9999:9999"
+    environment:
+      - ENVIRONMENT=development
+      - SECRET_KEY=${SECRET_KEY}
+      - ALLOWED_HOSTS=${ALLOWED_HOSTS:-localhost,127.0.0.1}
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: docker/backend/Dockerfile
+      args:
+        REQUIREMENTS_FILE: requirements-dev.txt
+
+  postgres:
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    networks:
+      tds-admin:
+        aliases:
+          - nginx
+    depends_on:
+      - backend
+      - frontend
+    restart: unless-stopped

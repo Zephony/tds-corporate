@@ -1,0 +1,6 @@
+ID,Name,Email,Password,Status,Role
+1,Albus,albus@local,Password,Active,1
+2,Ron,ron@local,password,Active,1
+3,Harry,harry@local,password,Active,1
+4,Draco,draco@local,password,Active,1
+5,Moony,moony@local,password,Active,1

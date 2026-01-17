@@ -1,0 +1,9 @@
+Token,Name,Message,Notes,Data
+user.create,User creation,User {user.name} was created,Done,user
+user.update,User updation,User {user.name} was updated,Done,user
+user.log_in,User login,User {user.name} logged in,Done,user
+user.activate,User activation,User {user.name} was activated,Done,user
+user.deactivate,User deactivation,User {user.name} was deactivated,Done,user
+role.create,Role creation,Role {role.name} was created,Done,role
+role.update,Role updation,Role {role.name} was updated,Done,role
+role.delete,Role deletion,Role {role.name} was deleted,Done,role

@@ -1,0 +1,84 @@
+/*
+ * This file contains all the variables that are
+ * used in the application.
+ * */
+:root {
+  --mobile-breakpoint: 900px;
+  --web-breakpoint: 1440px;
+
+  --sidebar-width: 230px;
+  --header-height: 60px;
+
+  /* Bg color */
+  --main-bg-color: #f3f4f6;
+  --white-bg: #FFFFFF;
+  --light-blue-bg: #E8F1FF;
+  --green-bg: #DCF9E8;
+  --droplist-bg: #F8F8F8;
+  --inactive-bg: #FFEAE5;
+  --pending-bg: #F2F4F6;
+  --slider-inactive-bg: #999CA0;
+  --progress-bg: #FFF5D4;
+  --status-blue-bg: #C9DFFF80;
+  --link-text: #437CD1;
+  --text-area-bg: #FDFDFD;
+
+  /* Font */
+  --font-color: #333333;
+  --font-light-color: #8B98AA;
+  --font-blue-color: #0B5DD8;
+  --font-sub-text: #999999;
+  --font-green: #2FA75F;
+  --font-red: #E75A5A;
+  --font-grey: #555555;
+  --progress-text: #DB9211;
+  --sub-text: #777777;
+  --dot-bg: #D9D9D9;
+  --light-blue-text: #B0B9C7;
+
+  /* Hover bg */
+  --white-hover: #f5f5f5;
+  --row-hover: #ffffff4d;
+
+  /* Line Color */
+  --line-color: #DDDDDD;
+  --table-border-line: #FAFAFA;
+  
+  /* Border Color */
+  --light-border: #EEEEEE;
+  --search-border: #EAEAEA;
+
+  /* Color related */
+  --red: #ed6c6c;
+  --green: #20a46c;
+  --grey: #999999;
+  --dark-grey: #283e6a;
+  --white: #ffffff;
+  --yellow: #ffe18e;
+  --dark-yellow: #f2c024;
+
+  --body-color: #f2f4f6;
+
+  --link-color: #0170ff;
+  --email-color: #39b5ff;
+  --input-border-color: #cccccc;
+  --menu-active-color: #2c406e;
+  --menu-color: #a1b1cf;
+
+  --form-header-color: #32383f;
+  --title-color: #2c406e;
+  --section-background: #fff;
+
+  /* Button related */
+  --primary-button-background: #ffe18e;
+  --primary-button-color: #2c406e;
+  --danger-button-background: #ed6c6c;
+  --danger-button-color: #fff;
+
+  /* Input */
+  --label-color: #8f9eb8;
+  --input-border-color: #e9ecf1;
+  --input-value-color: #2c406e;
+  --input-placeholder-color: #cccccc;
+  --checkbox-checkmark-width: 60px;
+}

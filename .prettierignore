@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+dist
+build
+coverage
+.venv
+venv
+uploads
+static
+**/*.min.js
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

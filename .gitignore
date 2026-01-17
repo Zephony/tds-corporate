@@ -1,0 +1,76 @@
+# Common files
+*.backup
+*.pyc
+*.swp
+*.swo
+~*
+.~*
+*~
+*.log*
+*.pid
+*.cache
+
+
+# Directories
+*__pycache__
+.pytest_cache
+venv
+__pycache__
+venv*
+trash
+
+# Celerybeat schedule
+celerybeat-schedule
+
+# Config
+local_config.py
+dev_config.py
+demo_config.py
+live_config.py
+
+.env
+.env.local
+.env.dev
+.env.demo
+.env.live
+
+*.db
+*.db-journal
+
+# NPM modules
+node_modules
+
+# OS generated files
+.DS_Store
+# Folder used for macOS to maintain properties of Finder application
+**/.DS_Store
+
+# Requirements files
+requirements_*
+
+#idea/pycharm specific
+.idea
+
+# vscode specific
+.vscode
+
+# This file gets generated when there is problem with RQ
+dump.rdb
+
+
+*storybook.log
+storybook-static
+
+# uploads: ignore everything but keep placeholder
+uploads/**
+!uploads/.gitkeep
+
+# SSL certificates (generated locally)
+ssl/
+ssl/*.pem
+ssl/*.key
+ssl/*.crt
+
+# Agent files (LLM specific)
+CLAUDE.md
+AGENTS.md

@@ -1,0 +1,4 @@
+Title,Description,Order Date,Completion Date,Product ID,Quantity Ordered,Unit Price,Total Amount,Discount Amount,Final Amount,Status,Payment Status,Delivery Status,Buyer ID,Company ID
+EU Finance Directors Order,Initial bulk dataset purchase,2024-02-15T10:30:00Z,2024-02-20T18:00:00Z,1,1,1500.00,1500.00,0.00,1500.00,COMPLETED,PAID,DELIVERED,1,1
+NA SMB Leads Subscription,Ongoing subscription for SMB live leads,2024-03-01T09:00:00Z,,2,200,35.00,7000.00,350.00,6650.00,COMPLETED,PAID,DELIVERED,2,2
+APAC SaaS Advisory Order,Preorder for upcoming APAC SaaS dataset,2024-03-12T14:15:00Z,,3,1,950.00,950.00,0.00,950.00,PENDING,PENDING,PENDING,3,3

@@ -1,0 +1,25 @@
+Name,Description,Channel,Status,Subject,Body,Has Attachment,Agent Active,Client View,Template Type,Character Count,Agent Send,Marketing,Version,Last Published At,Created By User ID
+Onboarding Email,Welcome email for new buyers,EMAIL,ACTIVE,Welcome to TDS,"<p>Hello {{name}}, welcome aboard!</p>",True,True,True,,,False,False,1,2024-03-01T10:00:00Z,1
+Password Reset,Email sent when a user requests password reset,EMAIL,ACTIVE,Reset your password,"<p>Hi {{name}}, click <a href=""{{reset_link}}"">here</a> to reset.</p>",False,True,False,,,False,False,2,2024-03-02T08:15:00Z,1
+Invoice Ready,Notifies buyers their invoice is available,EMAIL,ACTIVE,Your TDS invoice,<p>Invoice {{invoice_number}} is ready for download.</p>,True,False,True,,,False,False,1,2024-03-03T11:20:00Z,2
+Dispute Acknowledgement,Sent to buyers when a dispute is opened,EMAIL,ACTIVE,We've received your dispute,"<p>Hello {{name}}, we're reviewing dispute {{dispute_id}}.</p>",False,True,True,,,False,False,1,2024-03-05T15:45:00Z,3
+Dispute Resolution,Outcome email once dispute closes,EMAIL,ACTIVE,Update on dispute {{dispute_id}},<p>Outcome: {{resolution_summary}}.</p>,True,True,True,,,False,False,1,2024-03-08T09:05:00Z,3
+Monthly Usage Report,Summary of API usage for clients,EMAIL,ACTIVE,Your monthly usage report,<p>Attached is your usage report for {{month}}.</p>,True,False,True,,,False,False,2,2024-03-10T07:10:00Z,4
+Seller Activation,Instructions for sellers after approval,EMAIL,ACTIVE,You're approved to sell,"<p>Hi {{name}}, start listing products by visiting {{dashboard_link}}.</p>",False,True,False,,,False,False,1,2024-03-12T13:25:00Z,5
+Buyer Reactivation,Nudges inactive buyers,EMAIL,ACTIVE,We miss you at TDS,"<p>Hi {{name}}, here's what's new on the marketplace.</p>",False,False,True,,,False,False,1,2024-03-14T18:40:00Z,6
+Order Delivery,Sent when data delivery completes,EMAIL,ACTIVE,Your order {{order_id}} is fulfilled,<p>Download your files here: {{download_link}}.</p>,True,True,True,,,False,False,3,2024-03-16T09:50:00Z,2
+Credit Balance Low,Alerts buyer when credits are low,EMAIL,ACTIVE,Low credit balance,<p>Your remaining credits: {{credit_balance}}. Top up soon!</p>,False,False,True,,,False,False,1,2024-03-18T06:55:00Z,1
+Account Suspension,Notifies user of account suspension,EMAIL,INACTIVE,Important: account suspension,"<p>Hi {{name}}, your account is currently suspended.</p>",False,False,True,,,False,False,1,2024-03-20T12:05:00Z,4
+Product Review Request,Asks buyers to leave a product review,EMAIL,ACTIVE,How was your recent purchase?,<p>Please rate {{product_name}}.</p>,False,False,True,,,False,False,2,2024-03-22T17:30:00Z,5
+Order Confirmation SMS,Transactional confirmation message,SMS,ACTIVE,,Your order {{order_id}} is confirmed.,False,False,False,TRANSACTIONAL,72,True,False,1,2024-03-05T09:00:00Z,2
+Order Dispatch SMS,Sent when an order ships,SMS,ACTIVE,,Order {{order_id}} has been dispatched.,False,False,False,TRANSACTIONAL,68,True,False,1,2024-03-06T12:10:00Z,2
+OTP Verification,One-time password for login,SMS,ACTIVE,,Your TDS verification code is {{otp}}.,False,False,False,OTP,44,True,False,1,2024-03-07T07:30:00Z,1
+Dispute Update SMS,Short updates on disputes,SMS,ACTIVE,,Dispute {{dispute_id}} status: {{status}}.,False,False,False,TRANSACTIONAL,60,True,False,1,2024-03-09T14:20:00Z,3
+Buyer Reactivation SMS,Reminder for inactive buyers,SMS,ACTIVE,,"{{name}}, come back to explore new listings!",False,False,False,MARKETING,57,True,True,1,2024-03-11T08:00:00Z,6
+Credit Low SMS,Alerts buyer of low credit,SMS,ACTIVE,,Credits low: {{credit_balance}} remaining.,False,False,False,TRANSACTIONAL,52,True,False,1,2024-03-13T16:45:00Z,1
+Seller Payout SMS,Notifies sellers of upcoming payout,SMS,ACTIVE,,Payout of £{{amount}} scheduled on {{date}}.,False,False,False,TRANSACTIONAL,60,True,False,1,2024-03-15T10:15:00Z,5
+New Leads SMS,Marketing blast about new leads,SMS,ACTIVE,,Fresh {{category}} leads just dropped. Check now!,False,False,False,MARKETING,63,False,True,1,2024-03-17T18:25:00Z,4
+Maintenance Notice SMS,Service downtime alert,SMS,ACTIVE,,Scheduled maintenance on {{date}} {{time}}.,False,False,False,TRANSACTIONAL,58,True,False,1,2024-03-19T06:35:00Z,3
+Campaign Launch SMS,Notifies marketing campaign launch,SMS,INACTIVE,,New campaign live: {{campaign_name}}.,False,False,False,MARKETING,55,False,True,1,2024-03-21T11:05:00Z,2
+OTP Resend,Second attempt OTP,SMS,ACTIVE,,Your new verification code: {{otp}}.,False,False,False,OTP,40,True,False,1,2024-03-23T12:00:00Z,1
+Feedback Request SMS,Request feedback after order,SMS,ACTIVE,,Rate your recent purchase: {{review_link}}.,False,False,False,TRANSACTIONAL,60,True,False,1,2024-03-25T09:55:00Z,3

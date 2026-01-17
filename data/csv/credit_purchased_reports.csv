@@ -1,0 +1,4 @@
+ID User,User Name,User Email,Credit Purchased,Credit Used,Remaining Credits,Spent On Credits,Last Top Up,Status
+1,Albus,albus@local,8000,5200,2800,"£12,800.00",2024-03-05,active
+2,Ron,ron@local,6500,4300,2200,"£10,400.00",2024-03-08,growth
+3,Harry,harry@local,7200,6100,1100,"£11,520.00",2024-03-11,watchlist

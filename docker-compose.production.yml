@@ -1,0 +1,57 @@
+# Production overrides for multi-app deployment
+# This removes external port mappings so apps only communicate internally
+# Usage: docker-compose -f docker-compose.yml -f docker-compose.production.yml up -d
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/frontend/Dockerfile
+      target: runner
+    environment:
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
+      - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL:-https://tds-admin.getpreview.io/api}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:8081').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  backend:
+    build:
+      context: .
+      dockerfile: docker/backend/Dockerfile
+      target: prod
+      args:
+        APP_UID: ${APP_UID:-1000}
+        APP_GID: ${APP_GID:-1000}
+    environment:
+      - ENVIRONMENT=production
+      - SECRET_KEY=${SECRET_KEY}
+      - ALLOWED_HOSTS=${ALLOWED_HOSTS:-localhost,127.0.0.1}
+    # Remove external port mapping in production (use reverse proxy instead)
+    ports: !reset []
+    restart: unless-stopped
+
+  postgres:
+    # Remove external port mapping in production
+    ports: !reset []
+    restart: unless-stopped
+
+  nginx:
+    # Expose nginx container port for main server nginx to proxy to
+    ports:
+      - "127.0.0.1:${NGINX_PORT:-8080}:80"
+    restart: unless-stopped
+    networks:
+      tds-admin:
+        aliases:
+          - nginx
+    depends_on:
+      backend:
+        condition: service_healthy
+      frontend:
+        condition: service_healthy
