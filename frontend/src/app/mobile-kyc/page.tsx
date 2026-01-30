@@ -35,6 +35,36 @@ export default function MobileKycPage() {
         </div>
         </div>
       </section>
+
+      <section className="mk-carrier-strip">
+        <div className="mk-container">
+          <div className="mk-carrier-header">
+            <h2 className="mk-carrier-title">
+              Carrier-backed identity verification across UK mobile networks
+            </h2>
+            <p className="mk-carrier-subtitle">
+              Trusted by leading carriers and mobile identity partners.
+            </p>
+          </div>
+          <div className="mk-carrier-logos">
+            <span className="mk-carrier-logo">
+              <img src="/logo-vodafone.svg" alt="Vodafone" />
+            </span>
+            <span className="mk-carrier-logo">
+              <img src="/logo-ee.svg" alt="EE" />
+            </span>
+            <span className="mk-carrier-logo">
+              <img src="/logo-o2.svg" alt="O2" />
+            </span>
+            <span className="mk-carrier-logo">
+              <img src="/logo-3.svg" alt="Three" />
+            </span>
+            <span className="mk-carrier-logo">
+              <img src="/logo-prove.svg" alt="Prove" />
+            </span>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
