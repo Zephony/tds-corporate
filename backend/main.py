@@ -56,8 +56,8 @@ from backend.middleware import register_exception_handlers
 
 # Create FastAPI app
 app = FastAPI(
-    title='TDS Admin API',
-    description='Backend API for TDS Admin Panel',
+    title='TDS Corporate API',
+    description='Backend API for TDS Corporate Website',
     version='1.0.0',
 )
 
@@ -78,7 +78,7 @@ ADMIN_API_PREFIX = '/api/v1/admin'
 @app.get("/api/v1/health")
 async def health_check():
     """Health check endpoint for monitoring and load balancers"""
-    return {"status": "healthy", "service": "tds-admin-api"}
+    return {"status": "healthy", "service": "tds-corporate-api"}
 
 
 class MetadataObjectRoutes:

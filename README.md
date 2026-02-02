@@ -1,6 +1,27 @@
-# TDS Admin Panel
+# TDS Corporate Website
 
-The Admin panel for The Data Supermarket.
+The public-facing corporate website for The Data Supermarket (TDS), featuring the Mobile KYC product.
+
+## Overview
+
+This is a marketing website showcasing TDS's **Mobile KYC & Trust Scoring** product — carrier-derived identity verification and fraud prevention using mobile network signals.
+
+### Key Features
+
+- **Mobile KYC Product Landing Page** (`/mobile-kyc`)
+  - Carrier-backed identity verification across UK mobile networks
+  - Fraud prevention, lead validation, and risk reduction
+  - Integration with major carriers: Vodafone, EE, O2, Three
+  - Partnership with Prove for identity verification
+
+### Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| Frontend | Next.js 15.5, React 19, TypeScript |
+| Backend | FastAPI (Python 3.13), SQLAlchemy |
+| Database | PostgreSQL 17 |
+| Infrastructure | Docker Compose, Nginx |
 
 ## Quick Start
 
@@ -9,7 +30,7 @@ The Admin panel for The Data Supermarket.
 1. **Clone the repository:**
    ```bash
    git clone <repository_url>
-   cd tds-admin
+   cd tds-corporate
    ```
 
 2. **Set up environment variables:**
@@ -17,64 +38,74 @@ The Admin panel for The Data Supermarket.
    cp env.local .env
    # Edit .env with your actual values
    ```
-   Tip: Ask a colleague for the initial `.env` setup.
 
-3. **(Optional) Generate SSL certificates for local development:**
+3. **Start the full stack:**
    ```bash
-   # Create SSL directory and generate self-signed certificates
-   mkdir -p ssl
-   openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
-     -keyout ssl/key.pem \
-     -out ssl/cert.pem \
-     -subj "/C=US/ST=State/L=City/O=City/O=Organization/CN=City/O=Organization/CN=localhost"
-   ```
-   
-   **Note**: The `ssl/` directory is gitignored for security reasons. Each developer needs to generate their own certificates locally.
-
-4. **Start the full stack:**
-   ```bash
-   # Start services without nginx (default development setup)
    docker compose up -d
-   
-   # To start with nginx (production-like setup)
-   docker compose --profile nginx up -d
    ```
 
-5. **Reset the database (initial setup):**
-   ```bash
-   make reset-database
-   ```
-
-   Extra tip: To also clear uploaded files used during development/testing, run:
-   ```bash
-   make reset-data
-   ```
-
-6. **Access your application:**
-
-   **Without nginx (default):**
-   - **Next.js app**: http://localhost:3000
+4. **Access your application:**
+   - **Website**: http://localhost:3000
+   - **Mobile KYC Page**: http://localhost:3000/mobile-kyc
    - **API Documentation**: http://localhost:9999/docs
 
-   **With nginx (production-like):**
-   - **Next.js app**: http://localhost (if enabled)
-   - **API Documentation**: http://localhost/api/docs
+### Development Commands
 
-### Troubleshooting
+```bash
+# Start services
+docker compose up -d
+
+# View logs
+docker compose logs -f
+
+# Rebuild after changes
+docker compose up -d --build
+
+# Stop services
+docker compose down
+```
+
+### Optional: SSL for Local Development
+
+```bash
+# Create SSL directory and generate self-signed certificates
+mkdir -p ssl
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+  -keyout ssl/key.pem \
+  -out ssl/cert.pem \
+  -subj "/CN=localhost"
+
+# Start with nginx profile
+docker compose --profile nginx up -d
+```
+
+## Project Structure
+
+```
+tds-corporate/
+├── frontend/               # Next.js application
+│   └── src/
+│       ├── app/
+│       │   ├── page.tsx           # Homepage
+│       │   ├── mobile-kyc/        # Mobile KYC landing page
+│       │   └── product/           # Product page
+│       ├── components/            # Reusable components
+│       └── css/                   # Stylesheets
+├── backend/                # FastAPI application
+│   ├── main.py            # API routes
+│   └── models/            # Database models
+├── docker/                # Dockerfiles
+├── infrastructure/        # Deployment scripts
+└── docker-compose.yml     # Service orchestration
+```
+
+## Troubleshooting
 
 **SSL Certificate Issues:**
 - SSL certificates are only needed when running with nginx profile
-- If nginx fails to start with SSL errors, regenerate the certificates:
-  ```bash
-  rm -rf ssl/
-  mkdir -p ssl
-  openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
-    -keyout ssl/key.pem \
-    -out ssl/cert.pem \
-    -subj "/C=US/ST=State/L=City/O=City/O=City/O=City/O=Organization/CN=localhost"
-  ```
+- Regenerate if nginx fails to start with SSL errors
 
 **Browser SSL Warnings:**
 - Self-signed certificates will show browser warnings (normal for local development)
-- Accept the security warning or use HTTP instead of HTTPS
+- Accept the security warning or use HTTP instead
 

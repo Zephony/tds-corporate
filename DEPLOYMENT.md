@@ -1,6 +1,6 @@
-# Arabic OCR Deployment Guide
+# TDS Corporate Deployment Guide
 
-This guide will walk you through deploying the Arabic OCR application to DigitalOcean using GitHub Actions for automated deployments.
+This guide will walk you through deploying the TDS Corporate website to DigitalOcean using GitHub Actions for automated deployments.
 
 ## Prerequisites
 
@@ -40,8 +40,8 @@ su - deploy
 ### 2.1 Run the Server Setup Script
 ```bash
 # Clone your repository
-git clone https://github.com/YOUR_USERNAME/tds-admin.git
-cd tds-admin
+git clone https://github.com/YOUR_USERNAME/tds-corporate.git
+cd tds-corporate
 
 # Run the server setup script
 ./setup-server.sh
@@ -97,26 +97,26 @@ sudo apt install certbot
 sudo certbot certonly --standalone -d yourdomain.com
 
 # Copy certificates to the application directory
-sudo cp /etc/letsencrypt/live/yourdomain.com/fullchain.pem /opt/tds-admin/ssl/cert.pem
-sudo cp /etc/letsencrypt/live/yourdomain.com/privkey.pem /opt/tds-admin/ssl/key.pem
+sudo cp /etc/letsencrypt/live/yourdomain.com/fullchain.pem /opt/tds-corporate/ssl/cert.pem
+sudo cp /etc/letsencrypt/live/yourdomain.com/privkey.pem /opt/tds-corporate/ssl/key.pem
 
 # Set proper permissions
-sudo chown deploy:deploy /opt/tds-admin/ssl/*
-sudo chmod 600 /opt/tds-admin/ssl/*
+sudo chown deploy:deploy /opt/tds-corporate/ssl/*
+sudo chmod 600 /opt/tds-corporate/ssl/*
 
 # Restart services
-cd /opt/tds-admin
+cd /opt/tds-corporate
 docker-compose restart nginx
 ```
 
 ### 4.3 Update Environment Variables
 ```bash
 # Edit the .env file
-nano /opt/tds-admin/.env
+nano /opt/tds-corporate/.env
 
 # Update these values:
-REACT_APP_API_URL=https://tds-admin.getpreview.io/api
-ALLOWED_HOSTS=tds-admin.getpreview.io
+NEXT_PUBLIC_API_URL=https://your-domain.com/api
+ALLOWED_HOSTS=your-domain.com
 ```
 
 ## Step 5: Test Deployment
@@ -124,10 +124,10 @@ ALLOWED_HOSTS=tds-admin.getpreview.io
 ### 5.1 Manual Test
 ```bash
 # Test the API
-curl https://tds-admin.getpreview.io/health
+curl https://your-domain.com/api/v1/health
 
 # Test the root route
-curl https://tds-admin.getpreview.io/
+curl https://your-domain.com/
 ```
 
 ### 5.2 Automated Deployment Test
@@ -149,13 +149,13 @@ docker-compose logs -f backend
 
 ### 6.2 Update Services
 ```bash
-cd /opt/tds-admin
+cd /opt/tds-corporate
 docker-compose pull
 docker-compose up -d
 ```
 
 ### 6.3 Backup Database
-PostgreSQL is bound to localhost and not exposed publicly. Use the bundled script (defaults to `/var/backups/tds-admin/db`, override with `BACKUP_DIR`):
+PostgreSQL is bound to localhost and not exposed publicly. Use the bundled script (defaults to `/var/backups/tds-corporate/db`, override with `BACKUP_DIR`):
 ```bash
 # One-off backup (compressed) to backups/db/
 bash scripts/db_backup.sh
@@ -195,9 +195,9 @@ sudo systemctl stop nginx    # if system nginx is running
 #### 3. Permission Issues
 ```bash
 # Fix file permissions
-sudo chown -R deploy:deploy /opt/tds-admin
-chmod 600 /opt/tds-admin/.env
-chmod 600 /opt/tds-admin/ssl/*
+sudo chown -R deploy:deploy /opt/tds-corporate
+chmod 600 /opt/tds-corporate/.env
+chmod 600 /opt/tds-corporate/ssl/*
 ```
 
 #### 4. Database Connection Issues
