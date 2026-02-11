@@ -5,7 +5,7 @@ export default function SiteHeader() {
     <header className="mk-site-header">
       <div className="mk-site-header-inner">
         <div className="mk-hero-header-left">
-          <div className="mk-hero-logo">TDS</div>
+          <div className="mk-hero-logo"><img src="/tds-logo.svg" alt="TDS" /></div>
           <nav aria-label="Primary">
             <ul className="mk-hero-nav mk-hero-nav-left">
               <li>Product</li>
@@ -24,7 +24,7 @@ export default function SiteHeader() {
               <li>Login</li>
             </ul>
           </nav>
-          <a href="#" className="mk-btn-primary mk-hero-try-btn">
+          <a href="#" className="btn btn-nav-primary">
             Try for free
           </a>
         </div>

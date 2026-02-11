@@ -4,7 +4,7 @@ import SiteHeader from '@/components/SiteHeader';
 
 export default function MobileKycPage() {
   return (
-    <>
+    <main className="mk-page">
       <SiteHeader />
       <section className="mk-hero">
         <div className="mk-container">
@@ -25,7 +25,7 @@ export default function MobileKycPage() {
             </p>
             
             <div className="mk-hero-buttons">
-              <a href="#" className="mk-btn-primary">Get Started → </a>
+              <a href="#" className="btn btn-hero-primary">Get Started → </a>
               <a href="#" className="mk-btn-secondary">View API Docs → </a>
             </div>
           </div>
@@ -40,10 +40,12 @@ export default function MobileKycPage() {
         <div className="mk-container">
           <div className="mk-carrier-header">
             <h2 className="mk-carrier-title">
-              Carrier-backed identity verification across UK mobile networks
+              Carrier-Derived Risk & Identity Signals Across UK Mobile Networks
             </h2>
             <p className="mk-carrier-subtitle">
-              Trusted by leading carriers and mobile identity partners.
+              Signals are derived from UK mobile networks and accessed through TDS’s 
+              centralised compliance and approval framework  without requiring businesses 
+              to onboard network by network.
             </p>
           </div>
           <div className="mk-carrier-logos">
@@ -63,6 +65,9 @@ export default function MobileKycPage() {
               <img src="/logo-prove.svg" alt="Prove" />
             </span>
           </div>
+          <p className="mk-carrier-footer">
+            This framework enables fast, controlled access while protecting networks, partners, and end users.
+          </p>
         </div>
       </section>
 
@@ -103,10 +108,7 @@ export default function MobileKycPage() {
               <p className="mk-onboarding-card-desc">Once approved, businesses can run checks instantly via API or manual tools while integration is completed.</p>
             </div>
             <div className="mk-onboarding-center-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <circle cx="12" cy="7" r="4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <img src="/shield-user-bold.svg" alt="Shield user" />
             </div>
           </div>
         </div>
@@ -115,160 +117,333 @@ export default function MobileKycPage() {
       {/* Trust Score & Mobile KYC */}
       <section className="mk-section mk-trust-score">
         <div className="mk-container">
-          <div className="mk-trust-grid">
-            <div className="mk-trust-content">
-              <h2 className="mk-section-title">Trust Score &amp; Mobile KYC</h2>
-              <p className="mk-section-subtitle">Allocate Checks</p>
-              <p className="mk-trust-desc">
-                Our trust score combines multiple carrier signals into a single, 
-                actionable metric. Use it to make instant decisions on user verification, 
-                fraud risk, and account security.
+          <div className="mk-section-header">
+            <h2 className="mk-section-title">Trust Score &amp; Mobile KYC</h2>
+          </div>
+
+          {/* Trust Score Feature Card */}
+          <div className="mk-feature-card">
+            <div className="mk-feature-card-header">
+              <span className="mk-feature-pill">Trust Score (Most Popular)</span>
+              <h3 className="mk-feature-card-title">What Trust Score does</h3>
+              <p className="mk-feature-card-subtitle">
+                Trust Score provides a real-time risk indicator for a mobile number using carrier-derived and behavioural signals.
               </p>
-              <ul className="mk-trust-features">
-                <li>
-                  <span className="mk-check-icon">✓</span>
-                  SIM swap detection
+              <p className="mk-feature-card-subtitle">
+                It is designed to identify fraud, impersonation, and low-quality submissions before downstream costs are triggered.
+              </p>
+            </div>
+
+            <div className="mk-feature-card-body">
+              <div className="mk-feature-card-content">
+                <h4 className="mk-feature-section-title">What Trust Score assesses</h4>
+                <ul className="mk-feature-list">
+                  <li>
+                    <span className="mk-check-icon">
+                      <img src="/green-check-icon.svg" alt="Check" />
+                    </span>
+                    Recent SIM swap activity and timestamps
+                  </li>
+                  <li>
+                    <span className="mk-check-icon">
+                      <img src="/green-check-icon.svg" alt="Check" />
+                    </span>
+                    SIM tenure and recency signals
+                  </li>
+                  <li>
+                    <span className="mk-check-icon">
+                      <img src="/green-check-icon.svg" alt="Check" />
+                    </span>
+                    Line type and carrier context
+                  </li>
+                  <li>
+                    <span className="mk-check-icon">
+                      <img src="/green-check-icon.svg" alt="Check" />
+                    </span>
+                    Behavioural and network-derived risk indicators
+                  </li>
+                  <li>
+                    <span className="mk-check-icon">
+                      <img src="/green-check-icon.svg" alt="Check" />
+                    </span>
+                    Known fraud and misuse patterns
+                  </li>
+                </ul>
+
+                <p className="mk-feature-text">
+                  These signals are combined to produce a clear trust score representing the relative risk of a submission.
+                </p>
+
+                <h4 className="mk-feature-section-title">How teams use Trust Score</h4>
+                <ul className="mk-feature-bullets">
+                  <li>Filter high-risk leads instantly</li>
+                  <li>Prevent fraud before credit checks or underwriting</li>
+                  <li>Compare quality by source or campaign</li>
+                  <li>Prioritise review where risk is elevated</li>
+                </ul>
+
+                <h4 className="mk-feature-section-title">Why it&apos;s popular</h4>
+                <p className="mk-feature-text">
+                  Fast, lightweight, and built for high-volume environments where speed and cost matter.
+                </p>
+              </div>
+
+              <div className="mk-feature-card-visual">
+                <img src="/trust-score.svg" alt="Trust Score Check" className="mk-feature-visual-img" />
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile KYC Feature Card */}
+          <div className="mk-feature-card">
+            <div className="mk-feature-card-header">
+              <span className="mk-feature-pill">Mobile KYC</span>
+              <h3 className="mk-feature-card-title">What Mobile KYC does</h3>
+              <p className="mk-feature-card-subtitle">
+                Mobile KYC performs a deeper identity assessment using mobile network signals to evaluate whether submitted identity details plausibly align with the mobile number provided.
+              </p>
+              <p className="mk-feature-card-subtitle">
+                It helps detect impersonation, synthetic identity, and misuse of personal data.
+              </p>
+            </div>
+
+            <div className="mk-feature-card-body">
+              <div className="mk-feature-card-content">
+                <h4 className="mk-feature-section-title">What Mobile KYC assesses</h4>
+                <ul className="mk-feature-list">
+                  <li>
+                    <span className="mk-check-icon">
+                      <img src="/green-check-icon.svg" alt="Check" />
+                    </span>
+                    Identity match indicators
+                  </li>
+                  <li>
+                    <span className="mk-check-icon">
+                      <img src="/green-check-icon.svg" alt="Check" />
+                    </span>
+                    Mobile account and number status
+                  </li>
+                  <li>
+                    <span className="mk-check-icon">
+                      <img src="/green-check-icon.svg" alt="Check" />
+                    </span>
+                    Consistency between submitted data and mobile attributes
+                  </li>
+                </ul>
+
+                <h4 className="mk-feature-section-title">When teams use Mobile KYC</h4>
+                <ul className="mk-feature-bullets">
+                  <li>Higher-risk transactions</li>
+                  <li>Regulated journeys</li>
+                  <li>Step-up verification when Trust Score flags risk</li>
+                </ul>
+
+                <p className="mk-feature-text mk-feature-note">
+                  Mobile KYC is typically used alongside Trust Score, not as a replacement.
+                </p>
+              </div>
+
+              <div className="mk-feature-card-visual">
+                <img src="/mobile-kyc.svg" alt="Mobile KYC Information" className="mk-feature-visual-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why This Matters (Beyond Fraud) */}
+      <section className="mk-section mk-why-matters">
+        <div className="mk-container">
+          <div className="mk-section-header">
+            <h2 className="mk-section-title">Why This Matters (Beyond Fraud)</h2>
+            <p className="mk-section-subtitle">
+              Fraud and low-quality submissions don&apos;t just waste leads.
+            </p>
+          </div>
+
+          <div className="mk-matters-card">
+            <p className="mk-matters-intro">They trigger</p>
+            
+            <div className="mk-matters-grid">
+              <div className="mk-matters-column">
+                <div className="mk-matters-item">
+                  <span className="mk-matters-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                      <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                  </span>
+                  <span className="mk-matters-text">Unnecessary credit checks</span>
+                </div>
+                <div className="mk-matters-item">
+                  <span className="mk-matters-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                      <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                  </span>
+                  <span className="mk-matters-text">Reputational and moral risk — especially when real people are affected</span>
+                </div>
+              </div>
+              <div className="mk-matters-column">
+                <div className="mk-matters-item">
+                  <span className="mk-matters-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                      <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                  </span>
+                  <span className="mk-matters-text">Wasted underwriting and review time</span>
+                </div>
+                <div className="mk-matters-item">
+                  <span className="mk-matters-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                      <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                  </span>
+                  <span className="mk-matters-text">Incorrect account creation</span>
+                </div>
+              </div>
+            </div>
+
+            <p className="mk-matters-footer">
+              Catching risk earlier reduces cost, protects consumers, and prevents damage that can&apos;t easily be undone.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Policy Enforcement & Audit Traceability */}
+      <section className="mk-section mk-policy-audit">
+        <div className="mk-container">
+          <div className="mk-section-header">
+            <h2 className="mk-section-title">Policy Enforcement &amp; Audit Traceability</h2>
+            <p className="mk-section-subtitle">
+              Access is continuously enforced against approved policy content.
+            </p>
+          </div>
+
+          <div className="mk-policy-audit-grid">
+            <div className="mk-policy-audit-item">
+              <p className="mk-policy-audit-text">Privacy policy content is monitored daily</p>
+            </div>
+            <div className="mk-policy-audit-item">
+              <p className="mk-policy-audit-text">If required disclosures change, re-verification is triggered automatically</p>
+            </div>
+            <div className="mk-policy-audit-item">
+              <p className="mk-policy-audit-text">If required content is removed, API access is suspended until resolved</p>
+            </div>
+            <div className="mk-policy-audit-item">
+              <p className="mk-policy-audit-text">Every verification is linked to the exact policy version in force at the time</p>
+            </div>
+          </div>
+
+          <div className="mk-policy-audit-footer">
+            <p className="mk-policy-audit-footer-text">
+              This creates a clear, provable audit trail for internal review, partners, and third-party checks.
+            </p>
+            <p className="mk-policy-audit-disclaimer">
+              <strong>TDS does not assess full GDPR compliance.</strong>
+            </p>
+            <p className="mk-policy-audit-disclaimer">
+              <strong>TDS enforces authorised disclosure and use conditions to protect networks, partners, and end users.</strong>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Common Gaps In Traditional Verification */}
+      <section className="mk-section mk-gaps">
+        <div className="mk-gaps-container">
+          <div className="mk-section-header">
+            <h2 className="mk-section-title-light">Common Gaps In Traditional Verification</h2>
+            <p className="mk-section-subtitle-light">
+              Move from document-heavy verification to carrier-backed identity checks.
+            </p>
+          </div>
+
+          <div className="mk-gaps-comparison">
+            {/* Problems Card */}
+            <div className="mk-gaps-card mk-gaps-card-dark">
+              <span className="mk-gaps-pill mk-gaps-pill-red">Problems</span>
+              <h3 className="mk-gaps-card-title mk-gaps-card-title-light">Why traditional verification breaks at scale</h3>
+              <ul className="mk-gaps-list">
+                <li className="mk-gaps-item">
+                  <span className="mk-gaps-icon mk-gaps-icon-warning">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                      <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                  </span>
+                  <span className="mk-gaps-text-light">Weeks-long onboarding and contracts</span>
                 </li>
-                <li>
-                  <span className="mk-check-icon">✓</span>
-                  Number tenure verification
+                <li className="mk-gaps-item">
+                  <span className="mk-gaps-icon mk-gaps-icon-warning">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                      <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                  </span>
+                  <span className="mk-gaps-text-light">Network-by-network approvals</span>
                 </li>
-                <li>
-                  <span className="mk-check-icon">✓</span>
-                  Device binding confirmation
+                <li className="mk-gaps-item">
+                  <span className="mk-gaps-icon mk-gaps-icon-warning">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                      <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                  </span>
+                  <span className="mk-gaps-text-light">Volume-based pricing barriers</span>
                 </li>
-                <li>
-                  <span className="mk-check-icon">✓</span>
-                  Real-time carrier data
+                <li className="mk-gaps-item">
+                  <span className="mk-gaps-icon mk-gaps-icon-warning">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                      <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                  </span>
+                  <span className="mk-gaps-text-light">Checks performed after costs are incurred</span>
+                </li>
+                <li className="mk-gaps-item">
+                  <span className="mk-gaps-icon mk-gaps-icon-warning">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                      <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                  </span>
+                  <span className="mk-gaps-text-light">Manual, one-off compliance reviews</span>
                 </li>
               </ul>
             </div>
-            <div className="mk-trust-visual">
-              <div className="mk-trust-card">
-                <div className="mk-trust-card-header">Trust Score</div>
-                <div className="mk-trust-card-score">87</div>
-                <div className="mk-trust-card-label">High Trust</div>
-                <div className="mk-trust-card-bar">
-                  <div className="mk-trust-card-bar-fill"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Why Trust Matters */}
-      <section className="mk-section mk-why-trust">
-        <div className="mk-container">
-          <div className="mk-why-trust-grid">
-            <div className="mk-why-trust-visual">
-              <div className="mk-diagram">
-                <div className="mk-diagram-item mk-diagram-fraud">
-                  <span className="mk-diagram-icon">⚠</span>
-                  <span>Fraud Attempt</span>
-                </div>
-                <div className="mk-diagram-arrow">→</div>
-                <div className="mk-diagram-item mk-diagram-check">
-                  <span className="mk-diagram-icon">🔍</span>
-                  <span>TDS Check</span>
-                </div>
-                <div className="mk-diagram-arrow">→</div>
-                <div className="mk-diagram-item mk-diagram-block">
-                  <span className="mk-diagram-icon">🛡</span>
-                  <span>Blocked</span>
-                </div>
-              </div>
-            </div>
-            <div className="mk-why-trust-content">
-              <h2 className="mk-section-title">Why Trust Matters (Diagram) Result</h2>
-              <p className="mk-trust-desc">
-                Traditional verification methods fail to catch sophisticated fraud. 
-                Carrier-derived signals provide an additional layer of trust that 
-                fraudsters cannot easily bypass.
-              </p>
-              <p className="mk-trust-desc">
-                By validating against real carrier data, you catch SIM swaps, 
-                number recycling, and account takeover attempts before they succeed.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Policy Enforcement & Fraud Prevention - Dark Section */}
-      <section className="mk-section-dark mk-policy">
-        <div className="mk-container">
-          <div className="mk-section-header">
-            <h2 className="mk-section-title-light">Policy Enforcement &amp; Fraud Prevention</h2>
-            <p className="mk-section-subtitle-light">
-              Automate your security policies with real-time carrier intelligence
-            </p>
-          </div>
-          <div className="mk-policy-grid">
-            <div className="mk-policy-card">
-              <div className="mk-policy-card-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M12 8V12L15 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                </svg>
-              </div>
-              <h3 className="mk-policy-card-title">Real-time Blocking</h3>
-              <p className="mk-policy-card-desc">Instantly block suspicious numbers based on carrier signals and trust scores.</p>
-            </div>
-            <div className="mk-policy-card">
-              <div className="mk-policy-card-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </div>
-              <h3 className="mk-policy-card-title">Automated Rules</h3>
-              <p className="mk-policy-card-desc">Set custom rules to automatically approve, flag, or reject based on risk level.</p>
-            </div>
-            <div className="mk-policy-card">
-              <div className="mk-policy-card-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </div>
-              <h3 className="mk-policy-card-title">Layered Security</h3>
-              <p className="mk-policy-card-desc">Combine carrier data with your existing fraud prevention stack.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Common Steps to Traditional Verification */}
-      <section className="mk-section-dark mk-traditional">
-        <div className="mk-container">
-          <div className="mk-section-header">
-            <h2 className="mk-section-title-light">Common Steps to Traditional Verification</h2>
-          </div>
-          <div className="mk-traditional-grid">
-            <div className="mk-traditional-card">
-              <div className="mk-traditional-step">1</div>
-              <h3 className="mk-traditional-title">Document Upload</h3>
-              <p className="mk-traditional-desc">Users must upload ID documents and wait for manual review.</p>
-              <span className="mk-traditional-time">⏱ 2-5 days</span>
-            </div>
-            <div className="mk-traditional-card">
-              <div className="mk-traditional-step">2</div>
-              <h3 className="mk-traditional-title">Manual Review</h3>
-              <p className="mk-traditional-desc">Staff manually verify documents against databases.</p>
-              <span className="mk-traditional-time">⏱ 1-3 days</span>
-            </div>
-            <div className="mk-traditional-card">
-              <div className="mk-traditional-step">3</div>
-              <h3 className="mk-traditional-title">SMS OTP</h3>
-              <p className="mk-traditional-desc">One-time passwords can be intercepted via SIM swap.</p>
-              <span className="mk-traditional-time">⚠ Vulnerable</span>
-            </div>
-            <div className="mk-traditional-card">
-              <div className="mk-traditional-step">4</div>
-              <h3 className="mk-traditional-title">Approval</h3>
-              <p className="mk-traditional-desc">Finally approved after multiple friction points.</p>
-              <span className="mk-traditional-time">⏱ 3-7 days total</span>
+            {/* Solution Card */}
+            <div className="mk-gaps-card mk-gaps-card-light">
+              <span className="mk-gaps-pill mk-gaps-pill-green">Solution</span>
+              <h3 className="mk-gaps-card-title">Verify identity at the source</h3>
+              <ul className="mk-gaps-list">
+                <li className="mk-gaps-item">
+                  <span className="mk-gaps-icon mk-gaps-icon-check">
+                    <img src="/green-check-icon.svg" alt="Check" />
+                  </span>
+                  <span className="mk-gaps-text">Instant B2B approval to access the service</span>
+                </li>
+                <li className="mk-gaps-item">
+                  <span className="mk-gaps-icon mk-gaps-icon-check">
+                    <img src="/green-check-icon.svg" alt="Check" />
+                  </span>
+                  <span className="mk-gaps-text">Verify users using live carrier data</span>
+                </li>
+                <li className="mk-gaps-item">
+                  <span className="mk-gaps-icon mk-gaps-icon-check">
+                    <img src="/green-check-icon.svg" alt="Check" />
+                  </span>
+                  <span className="mk-gaps-text">Clear match / no-match results</span>
+                </li>
+                <li className="mk-gaps-item">
+                  <span className="mk-gaps-icon mk-gaps-icon-check">
+                    <img src="/green-check-icon.svg" alt="Check" />
+                  </span>
+                  <span className="mk-gaps-text">MNO-approved compliance framework</span>
+                </li>
+                <li className="mk-gaps-item">
+                  <span className="mk-gaps-icon mk-gaps-icon-check">
+                    <img src="/green-check-icon.svg" alt="Check" />
+                  </span>
+                  <span className="mk-gaps-text">Centralised approval and enforcement</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -278,71 +453,36 @@ export default function MobileKycPage() {
       <section className="mk-section mk-different">
         <div className="mk-container">
           <div className="mk-section-header">
-            <h2 className="mk-section-title">Why TDS Mobile KYC is Different</h2>
-            <p className="mk-section-subtitle">
-              Skip the friction. Get instant, carrier-grade verification.
-            </p>
+            <h2 className="mk-section-title">Why TDS Mobile KYC Is Different</h2>
           </div>
           <div className="mk-different-grid">
             <div className="mk-different-card">
               <div className="mk-different-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+                <img src="/compliance-enforced.svg" alt="Compliance enforced" />
               </div>
-              <h3 className="mk-different-title">Instant Results</h3>
-              <p className="mk-different-desc">Get verification results in milliseconds, not days.</p>
+              <h3 className="mk-different-title">Compliance-enforced by design</h3>
+              <p className="mk-different-desc">Approval is automated, conditional, and enforced at API creation — not a one-time checkbox.</p>
             </div>
             <div className="mk-different-card">
               <div className="mk-different-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M8 12L10.5 14.5L16 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+                <img src="/transparent-pricing.svg" alt="Transparent pricing" />
               </div>
-              <h3 className="mk-different-title">No Documents</h3>
-              <p className="mk-different-desc">No ID uploads, selfies, or manual review required.</p>
+              <h3 className="mk-different-title">Transparent pricing</h3>
+              <p className="mk-different-desc">Same price for everyone. No contracts. No minimums. No expiry.</p>
             </div>
             <div className="mk-different-card">
               <div className="mk-different-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 22S20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+                <img src="/scale.svg" alt="Built for scale" />
               </div>
-              <h3 className="mk-different-title">SIM Swap Protection</h3>
-              <p className="mk-different-desc">Detect SIM swaps and number porting in real-time.</p>
+              <h3 className="mk-different-title">Built for real-world scale</h3>
+              <p className="mk-different-desc">API-first, with manual tools available while teams integrate.</p>
             </div>
             <div className="mk-different-card">
               <div className="mk-different-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M12 6V12L16 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                </svg>
+                <img src="/central-approval-flow.svg" alt="Central approval flow" />
               </div>
-              <h3 className="mk-different-title">Real-time Data</h3>
-              <p className="mk-different-desc">Live carrier data, not stale database lookups.</p>
-            </div>
-            <div className="mk-different-card">
-              <div className="mk-different-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M17 21V19C17 16.7909 15.2091 15 13 15H5C2.79086 15 1 16.7909 1 19V21" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                  <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M23 21V19C22.9986 17.1771 21.765 15.5857 20 15.13" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                  <path d="M16 3.13C17.7699 3.58317 19.0078 5.17799 19.0078 7.005C19.0078 8.83201 17.7699 10.4268 16 10.88" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                </svg>
-              </div>
-              <h3 className="mk-different-title">User Friendly</h3>
-              <p className="mk-different-desc">Zero friction for legitimate users.</p>
-            </div>
-            <div className="mk-different-card">
-              <div className="mk-different-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M14.7 6.3C14.5168 6.11671 14.2671 6.01328 14.0064 6.01328C13.7457 6.01328 13.496 6.11671 13.3128 6.3L9 10.59L7.71 9.3C7.52671 9.11671 7.27711 9.01328 7.01643 9.01328C6.75575 9.01328 6.50615 9.11671 6.32286 9.3C6.13957 9.48329 6.03614 9.73289 6.03614 9.99357C6.03614 10.2543 6.13957 10.5039 6.32286 10.6871L8.32286 12.6871C8.50615 12.8704 8.75575 12.9739 9.01643 12.9739C9.27711 12.9739 9.52671 12.8704 9.71 12.6871L14.71 7.68714C14.8933 7.50385 14.9967 7.25425 14.9967 6.99357C14.9967 6.73289 14.8933 6.48329 14.71 6.3H14.7Z" fill="currentColor"/>
-                  <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="currentColor"/>
-                </svg>
-              </div>
-              <h3 className="mk-different-title">Compliant</h3>
-              <p className="mk-different-desc">GDPR and data protection compliant.</p>
+              <h3 className="mk-different-title">Single, central approval flow</h3>
+              <p className="mk-different-desc">No individual mobile network onboarding required.</p>
             </div>
           </div>
         </div>
@@ -351,64 +491,100 @@ export default function MobileKycPage() {
       {/* Simple, Transparent Pricing */}
       <section className="mk-section mk-pricing">
         <div className="mk-container">
-          <div className="mk-section-header">
-            <h2 className="mk-section-title">Simple, Transparent Pricing</h2>
-            <p className="mk-section-subtitle">
-              Pay only for what you use. No hidden fees, no long-term contracts.
-            </p>
-          </div>
-          <div className="mk-pricing-grid">
-            <div className="mk-pricing-card">
-              <div className="mk-pricing-header">
-                <h3 className="mk-pricing-name">Starter</h3>
-                <div className="mk-pricing-price">
-                  <span className="mk-pricing-currency">£</span>
-                  <span className="mk-pricing-amount">0.05</span>
-                  <span className="mk-pricing-period">/check</span>
-                </div>
-              </div>
-              <ul className="mk-pricing-features">
-                <li>Up to 1,000 checks/month</li>
-                <li>Basic trust score</li>
-                <li>Email support</li>
-                <li>API access</li>
-              </ul>
-              <a href="#" className="mk-btn-secondary mk-pricing-btn">Get Started</a>
+          <div className="mk-pricing-wrapper">
+            <div className="mk-section-header">
+              <h2 className="mk-section-title">Simple, Transparent Pricing</h2>
+              <p className="mk-section-subtitle">
+                Enterprise-grade mobile identity and fraud prevention — without contracts, volume commitments, or expiry tricks.
+              </p>
             </div>
-            <div className="mk-pricing-card mk-pricing-card-featured">
-              <div className="mk-pricing-badge">Most Popular</div>
-              <div className="mk-pricing-header">
-                <h3 className="mk-pricing-name">Growth</h3>
-                <div className="mk-pricing-price">
-                  <span className="mk-pricing-currency">£</span>
-                  <span className="mk-pricing-amount">0.03</span>
-                  <span className="mk-pricing-period">/check</span>
+
+            <div className="mk-pricing-cards">
+              {/* Trust Score Card */}
+              <div className="mk-pricing-card mk-pricing-card-recommended">
+                <span className="mk-pricing-badge">Recommended</span>
+                <h3 className="mk-pricing-name">Trust Score</h3>
+                <p className="mk-pricing-subtitle">Carrier-derived risk scoring</p>
+
+                <div className="mk-pricing-section">
+                  <h4 className="mk-pricing-section-title">What it&apos;s for</h4>
+                  <ul className="mk-pricing-list">
+                    <li>Stop fraud and poor-quality leads before they create cost</li>
+                    <li>High-risk journeys in lead generation, finance, and utilities</li>
+                    <li>Automated risk decisions using mobile network signals</li>
+                  </ul>
+                </div>
+
+                <div className="mk-pricing-section">
+                  <h4 className="mk-pricing-section-title">What you get</h4>
+                  <ul className="mk-pricing-list">
+                    <li>SIM swap timestamps</li>
+                    <li>Account stability &amp; tenure indicators</li>
+                    <li>Network-derived risk signals</li>
+                    <li>Designed for fraud prevention (not credit scoring)</li>
+                  </ul>
+                </div>
+
+                <a href="#" className="mk-pricing-btn-primary">£0.35/per check →</a>
+
+                <div className="mk-pricing-section">
+                  <h4 className="mk-pricing-section-title">Why teams choose this</h4>
+                  <ul className="mk-pricing-list">
+                    <li>No contracts</li>
+                    <li>No minimum volumes</li>
+                    <li>Credits never expire</li>
+                    <li>Same price whether you run 10 checks or 10 million</li>
+                  </ul>
                 </div>
               </div>
-              <ul className="mk-pricing-features">
-                <li>Up to 50,000 checks/month</li>
-                <li>Advanced trust score</li>
-                <li>Priority support</li>
-                <li>Webhooks &amp; analytics</li>
-                <li>Custom rules engine</li>
-              </ul>
-              <a href="#" className="mk-btn-primary mk-pricing-btn">Get Started</a>
+
+              {/* Mobile KYC Card */}
+              <div className="mk-pricing-card">
+                <h3 className="mk-pricing-name">Mobile KYC</h3>
+                <p className="mk-pricing-subtitle">Identity match only</p>
+
+                <div className="mk-pricing-section">
+                  <h4 className="mk-pricing-section-title">What it&apos;s for</h4>
+                  <ul className="mk-pricing-list">
+                    <li>Confirming a user matches a mobile number</li>
+                    <li>Lower-risk identity verification flows</li>
+                    <li>Situations where risk scoring isn&apos;t required</li>
+                  </ul>
+                </div>
+
+                <div className="mk-pricing-section">
+                  <h4 className="mk-pricing-section-title">What it does</h4>
+                  <ul className="mk-pricing-list">
+                    <li>Match / no-match identity confirmation</li>
+                    <li>No behavioural or risk scoring</li>
+                    <li>Verifies mobile number ownership</li>
+                    <li>No fraud context on its own</li>
+                  </ul>
+                </div>
+
+                <a href="#" className="mk-pricing-btn-primary">£0.45/per check →</a>
+
+                <div className="mk-pricing-section">
+                  <h4 className="mk-pricing-section-title">Good to know</h4>
+                  <ul className="mk-pricing-list">
+                    <li>Typically used alongside Trust Score</li>
+                    <li>Less popular on its own</li>
+                    <li>Same no-contract, no-expiry terms</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div className="mk-pricing-card">
-              <div className="mk-pricing-header">
-                <h3 className="mk-pricing-name">Enterprise</h3>
-                <div className="mk-pricing-price">
-                  <span className="mk-pricing-amount">Custom</span>
-                </div>
+
+            <p className="mk-pricing-disclaimer">* Does not affect credit files. Used solely for fraud prevention</p>
+
+            <div className="mk-pricing-includes">
+              <h4 className="mk-pricing-includes-title">All plans include</h4>
+              <div className="mk-pricing-includes-grid">
+                <span className="mk-pricing-includes-item">Secure API access</span>
+                <span className="mk-pricing-includes-item">Single central approval flow at API creation</span>
+                <span className="mk-pricing-includes-item">Automated compliance checks</span>
+                <span className="mk-pricing-includes-item">Full audit logs per request</span>
               </div>
-              <ul className="mk-pricing-features">
-                <li>Unlimited checks</li>
-                <li>Full carrier data access</li>
-                <li>Dedicated support</li>
-                <li>SLA guarantee</li>
-                <li>Custom integration</li>
-              </ul>
-              <a href="#" className="mk-btn-secondary mk-pricing-btn">Contact Sales</a>
             </div>
           </div>
         </div>
@@ -419,29 +595,18 @@ export default function MobileKycPage() {
         <div className="mk-container">
           <div className="mk-section-header">
             <h2 className="mk-section-title">Integrate With Your Existing Systems</h2>
-            <p className="mk-section-subtitle">
-              Works seamlessly with your current tech stack
-            </p>
+            <div className="mk-feature-card-subtitle">
+              Use Mobile KYC and Trust Score via simple REST APIs or manual tools. Ready to connect with your CRM, onboarding flow, or verification platform.
+            </div>
+            <div className="mk-feature-card-subtitle">
+              Teams can start immediately while integration is completed.
+            </div>
           </div>
-          <div className="mk-integrations-logos">
-            <div className="mk-integration-logo">
-              <img src="/stripe.svg" alt="Stripe" />
-            </div>
-            <div className="mk-integration-logo">
-              <img src="/paypal.svg" alt="PayPal" />
-            </div>
-            <div className="mk-integration-logo">
-              <img src="/slack.svg" alt="Slack" />
-            </div>
-            <div className="mk-integration-logo">
-              <img src="/zapier.svg" alt="Zapier" />
-            </div>
-            <div className="mk-integration-logo">
-              <img src="/klaviyo.svg" alt="Klaviyo" />
-            </div>
-            <div className="mk-integration-logo">
-              <img src="/reamaze.svg" alt="Reamaze" />
-            </div>
+          <div className="mk-integrations-cta">
+            <a href="#" className="mk-btn-primary">View Developer Docs →</a>
+          </div>
+          <div className="mk-integrations-image">
+            <img src="/integration-image.svg" alt="API Integration Documentation" />
           </div>
         </div>
       </section>
@@ -451,46 +616,76 @@ export default function MobileKycPage() {
         <div className="mk-footer-container">
           <div className="mk-footer-grid">
             <div className="mk-footer-brand">
-              <div className="mk-footer-logo">TDS</div>
+              <div className="mk-footer-logo"><img src="/tds-logo.svg" alt="TDS" /></div>
               <p className="mk-footer-tagline">
-                Carrier-derived Mobile KYC &amp; Trust Scoring for modern businesses.
+                This is sample text. Trusted by 1,500+ leading companies to reduce fraud and improve consumer experiences, TDS is the world&#39;s most accurate identity verification and authentication platform.
               </p>
+              <div className="mk-footer-social">
+                <a href="#" aria-label="Facebook">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+                <a href="#" aria-label="Instagram">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+                <a href="#" aria-label="X">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+              </div>
             </div>
             <div className="mk-footer-links">
               <div className="mk-footer-column">
                 <h4 className="mk-footer-heading">Product</h4>
                 <ul>
-                  <li><a href="#">Mobile KYC</a></li>
-                  <li><a href="#">Trust Score</a></li>
-                  <li><a href="#">API Docs</a></li>
-                  <li><a href="#">Pricing</a></li>
+                  <li><a href="#">TDS Marketplace</a></li>
+                  <li><a href="#">TDS DD Verify</a></li>
+                  <li><a href="#">TDS Ads Portal</a></li>
+                  <li><a href="#">TDS Compliance Tools</a></li>
+                </ul>
+              </div>
+              <div className="mk-footer-column">
+                <h4 className="mk-footer-heading">Resources</h4>
+                <ul>
+                  <li><a href="#">API Documentation</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Events</a></li>
                 </ul>
               </div>
               <div className="mk-footer-column">
                 <h4 className="mk-footer-heading">Company</h4>
                 <ul>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">Careers</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Leadership</a></li>
+                  <li><a href="#">Partners</a></li>
+                  <li><a href="#">Customer Stories</a></li>
                 </ul>
               </div>
-              <div className="mk-footer-column">
-                <h4 className="mk-footer-heading">Legal</h4>
+              <div className="mk-footer-column mk-footer-actions">
                 <ul>
-                  <li><a href="#">Privacy Policy</a></li>
-                  <li><a href="#">Terms of Service</a></li>
-                  <li><a href="#">GDPR</a></li>
-                  <li><a href="#">Security</a></li>
+                  <li><a href="#">Talk to Sales</a></li>
+                  <li><a href="#">Contact us</a></li>
+                  <li><a href="#">Login</a></li>
+                  <li><a href="#" className="mk-btn-primary mk-footer-cta">Try for Free</a></li>
                 </ul>
               </div>
             </div>
           </div>
           <div className="mk-footer-bottom">
-            <p className="mk-footer-copyright">© 2024 The Data Supermarket. All rights reserved.</p>
+            <div className="mk-footer-bottom-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+              <a href="#">Legal &amp; Compliance</a>
+              <a href="#">Refund Policy</a>
+              <a href="#">TDS Policies</a>
+              <a href="#">Manage Cookie Preference</a>
+              <a href="#">Do Not Sell or Share My Information</a>
+            </div>
+            <p className="mk-footer-copyright">© The Data Supermarket Ltd. All Rights Reserved.</p>
           </div>
         </div>
       </footer>
-    </>
+    </main>
   );
 }
