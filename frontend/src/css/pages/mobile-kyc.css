@@ -1109,7 +1109,7 @@
 .mk-matters-card {
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 24px;
+  border-radius: 16px;
   padding: 48px;
   position: relative;
   overflow: hidden;
@@ -1140,9 +1140,9 @@
 }
 
 .mk-matters-intro {
-  font-size: 16px;
+  font-size: 18px;
   color: #333333;
-  margin: 0 0 28px 0;
+  margin: 0 0 32px 0;
   position: relative;
 }
 
@@ -1157,7 +1157,7 @@
 .mk-matters-column {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
 }
 
 .mk-matters-item {
@@ -1184,15 +1184,15 @@
 }
 
 .mk-matters-text {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
-  color: #111827;
+  color: #333333;
   line-height: 1.5;
-  padding-top: 4px;
+  padding-top: 0px;
 }
 
 .mk-matters-footer {
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.7;
   color: #333333;
   margin: 0;
