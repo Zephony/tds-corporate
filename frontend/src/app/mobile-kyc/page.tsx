@@ -30,7 +30,7 @@ export default function MobileKycPage() {
             </div>
           </div>
           <div className="mk-hero-visual">
-            <div className="mk-hero-visual-placeholder"></div>
+            <img src="/right-hero-image-new.svg" alt="Hero visual" className="mk-hero-visual-img" />
           </div>
         </div>
         </div>
