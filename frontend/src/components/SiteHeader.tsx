@@ -8,24 +8,24 @@ export default function SiteHeader() {
           <div className="mk-hero-logo"><img src="/tds-logo.svg" alt="TDS" /></div>
           <nav aria-label="Primary">
             <ul className="mk-hero-nav mk-hero-nav-left">
-              <li>Product</li>
+              <li>Products</li>
+              <li>Partnerships</li>
+              <li>Features</li>
+              <li>Resources</li>
               <li>Pricing</li>
-              <li>Docs</li>
-              <li>Use cases</li>
-              <li>Customers</li>
             </ul>
           </nav>
         </div>
         <div className="mk-hero-header-right">
           <nav aria-label="Secondary">
             <ul className="mk-hero-nav mk-hero-nav-right">
-              <li>Security</li>
-              <li>Support</li>
+              <li>Talk to Sales</li>
+              <li>Contact us</li>
               <li>Login</li>
             </ul>
           </nav>
           <a href="#" className="btn btn-nav-primary">
-            Try for free
+            Try for Free
           </a>
         </div>
       </div>
