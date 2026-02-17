@@ -276,12 +276,12 @@
   font-size: 14px;
   color: #ffffff;
   background: #0B5DD8;
-  box-shadow: 0 2px 8px rgba(11, 93, 216, 0.2);
+  /* box-shadow: 0 2px 8px rgba(11, 93, 216, 0.2); */
 }
 
 .btn-nav-primary:hover {
   background: #094db8;
-  box-shadow: 0 4px 12px rgba(11, 93, 216, 0.3);
+  /* box-shadow: 0 4px 12px rgba(11, 93, 216, 0.3); */
 }
 
 /* Hero section primary button */
@@ -290,13 +290,13 @@
   font-size: 16px;
   color: #ffffff;
   background: #0B5DD8;
-  box-shadow: 0 8px 20px rgba(11, 93, 216, 0.3);
+  /* box-shadow: 0 8px 20px rgba(11, 93, 216, 0.3); */
 }
 
 .btn-hero-primary:hover {
   background: #094db8;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(11, 93, 216, 0.4);
+  /* transform: translateY(-2px); */
+  /* box-shadow: 0 12px 28px rgba(11, 93, 216, 0.4); */
 }
 
 /* Legacy - keep for footer/integrations */
@@ -313,7 +313,7 @@
   text-decoration: none;
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(27, 92, 255, 0.25);
+  /* box-shadow: 0 4px 12px rgba(27, 92, 255, 0.25); */
   transition: none;
 }
 
@@ -465,7 +465,7 @@
 .mk-onboarding-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 24px;
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
@@ -497,7 +497,7 @@
   height: 56px;
   background: #3675D3;
   border-radius: 50%;
-  filter: blur(60px);
+  filter: blur(100px);
   opacity: 0.4;
   pointer-events: none;
   z-index: 2;
@@ -522,32 +522,32 @@
 
 /* Circular notch cut-out — card 1 (top-left): cut at bottom-right */
 .mk-onboarding-card:nth-child(1) {
-  -webkit-mask-image: radial-gradient(circle at calc(100% + 10px) calc(100% + 10px), transparent 58px, black 59px);
-  mask-image: radial-gradient(circle at calc(100% + 10px) calc(100% + 10px), transparent 58px, black 59px);
+  -webkit-mask-image: radial-gradient(circle at calc(100% + 12px) calc(100% + 12px), transparent 94px, black 95px);
+  mask-image: radial-gradient(circle at calc(100% + 12px) calc(100% + 12px), transparent 94px, black 95px);
 }
 
 /* Circular notch cut-out — card 2 (top-right): cut at bottom-left */
 .mk-onboarding-card:nth-child(2) {
-  -webkit-mask-image: radial-gradient(circle at -10px calc(100% + 10px), transparent 58px, black 59px);
-  mask-image: radial-gradient(circle at -10px calc(100% + 10px), transparent 58px, black 59px);
+  -webkit-mask-image: radial-gradient(circle at calc(0% - 12px) calc(100% + 12px), transparent 94px, black 95px);
+  mask-image: radial-gradient(circle at calc(0% - 12px) calc(100% + 12px), transparent 94px, black 95px);
 }
 
 /* Circular notch cut-out — card 3 (bottom-left): cut at top-right */
 .mk-onboarding-card:nth-child(3) {
-  -webkit-mask-image: radial-gradient(circle at calc(100% + 10px) -10px, transparent 58px, black 59px);
-  mask-image: radial-gradient(circle at calc(100% + 10px) -10px, transparent 58px, black 59px);
+  -webkit-mask-image: radial-gradient(circle at calc(100% + 12px) calc(0% - 12px), transparent 94px, black 95px);
+  mask-image: radial-gradient(circle at calc(100% + 12px) calc(0% - 12px), transparent 94px, black 95px);
 }
 
 /* Card 3: Custom number positioning - slightly top and more toward center-left */
 .mk-onboarding-card:nth-child(3) .mk-onboarding-num {
-  top: 0px;
-  right: 3%;
+  top: 3%;
+  right: 9%;
 }
 
 /* Circular notch cut-out — card 4 (bottom-right): cut at top-left */
 .mk-onboarding-card:nth-child(4) {
-  -webkit-mask-image: radial-gradient(circle at -10px -10px, transparent 58px, black 59px);
-  mask-image: radial-gradient(circle at -10px -10px, transparent 58px, black 59px);
+  -webkit-mask-image: radial-gradient(circle at calc(0% - 12px) calc(0% - 12px), transparent 94px, black 95px);
+  mask-image: radial-gradient(circle at calc(0% - 12px) calc(0% - 12px), transparent 94px, black 95px);
 }
 
 .mk-onboarding-num {
@@ -583,23 +583,35 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   background: #ffffff;
-  border: 3px solid #3b82f6;
+  /* border: 5px solid #0B5DD8; */
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #3b82f6;
-  /* box-shadow: 0 8px 24px rgba(59, 130, 246, 0.2), 0 0 0 8px rgba(255, 255, 255, 0.8); */
+  color: #0B5DD8;
   z-index: 10;
+}
+
+.mk-onboarding-center-icon::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 16px);
+  height: calc(100% + 16px);
+  border: 5px solid #0B5DD8;
+  border-radius: 50%;
+  z-index: -1;
 }
 
 .mk-onboarding-center-icon svg,
 .mk-onboarding-center-icon img {
-  width: 40px;
-  height: 40px;
+  width: 72px;
+  height: 72px;
 }
 
 /* Responsive - Tablet */
@@ -1842,7 +1854,7 @@
 
 .mk-integrations-cta .mk-btn-primary {
   display: inline-block;
-  padding: 14px 28px;
+  padding: 14px 24px;
   font-size: 16px;
 }
 
@@ -1968,7 +1980,7 @@
 }
 
 .mk-footer-column a:hover {
-  color: #3675D3;
+  color: #0B5DD8;
 }
 
 .mk-footer-actions h4 {
@@ -1986,7 +1998,7 @@
 
 .mk-footer-cta {
   display: inline-block;
-  padding: 10px 24px;
+  padding: 8px 12px;
   font-size: 14px;
   font-weight: 600;
   border-radius: 8px;
@@ -2008,19 +2020,19 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  gap: 40px;
   margin-bottom: 20px;
 }
 
 .mk-footer-bottom-links a {
-  font-size: 13px;
-  color: #6b7280;
+  font-size: 16px;
+  color: #999999;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .mk-footer-bottom-links a:hover {
-  color: #3675D3;
+  color: #0B5DD8;
 }
 
 .mk-footer-copyright {
