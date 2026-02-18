@@ -30,7 +30,7 @@ export default function MobileKycPage() {
             </div>
           </div>
           <div className="mk-hero-visual">
-            <img src="/right-hero-image-new.svg" alt="Hero visual" className="mk-hero-visual-img" />
+            <img src="/right-hero-imagee.svg" alt="Hero visual" className="mk-hero-visual-img" />
           </div>
         </div>
         </div>
@@ -99,7 +99,7 @@ export default function MobileKycPage() {
             </div>
             <div className="mk-onboarding-card">
               <span className="mk-onboarding-num">03</span>
-              <h3 className="mk-onboarding-card-title">Single, central approval decision</h3>
+              <h3 className="mk-onboarding-card-title-three">Single, central approval decision</h3>
               <p className="mk-onboarding-card-desc">Approval is granted or rejected at API creation through a single, central approval flow — not via individual mobile network onboarding.</p>
             </div>
             <div className="mk-onboarding-card">
@@ -125,7 +125,7 @@ export default function MobileKycPage() {
           <div className="mk-feature-card">
             <div className="mk-feature-card-header">
               <span className="mk-feature-pill">Trust Score (Most Popular)</span>
-              <h3 className="mk-feature-card-title">What Trust Score does</h3>
+              <h3 className="mk-feature-card-title mk-feature-title-small">What Trust Score does</h3>
               <p className="mk-feature-card-subtitle">
                 Trust Score provides a real-time risk indicator for a mobile number using carrier-derived and behavioural signals.
               </p>
@@ -198,7 +198,7 @@ export default function MobileKycPage() {
           <div className="mk-feature-card">
             <div className="mk-feature-card-header">
               <span className="mk-feature-pill">Mobile KYC</span>
-              <h3 className="mk-feature-card-title">What Mobile KYC does</h3>
+              <h3 className="mk-feature-card-title mk-feature-title-small">What Mobile KYC does</h3>
               <p className="mk-feature-card-subtitle">
                 Mobile KYC performs a deeper identity assessment using mobile network signals to evaluate whether submitted identity details plausibly align with the mobile number provided.
               </p>
