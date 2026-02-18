@@ -743,7 +743,7 @@
 .mk-onboarding-card:nth-child(2) {
   -webkit-mask-image: radial-gradient(circle at calc(0% - 12px) calc(100% + 12px), transparent 94px, black 95px);
   mask-image: radial-gradient(circle at calc(0% - 12px) calc(100% + 12px), transparent 94px, black 95px);
-}thth
+}
 
 /* Circular notch cut-out — card 3 (bottom-left): cut at top-right */
 .mk-onboarding-card:nth-child(3) {
@@ -873,7 +873,7 @@
   }
   
   /* Adjust notch radius for smaller center icon (80px + 6px border = 43px radius) */
-  .mk-onboarding-card:nth-child(1) {
+  /* .mk-onboarding-card:nth-child(1) {
     -webkit-mask-image: radial-gradient(circle at calc(100% + 8px) calc(100% + 8px), transparent 48px, black 49px);
     mask-image: radial-gradient(circle at calc(100% + 8px) calc(100% + 8px), transparent 48px, black 49px);
   }
@@ -888,7 +888,7 @@
   .mk-onboarding-card:nth-child(4) {
     -webkit-mask-image: radial-gradient(circle at -8px -8px, transparent 48px, black 49px);
     mask-image: radial-gradient(circle at -8px -8px, transparent 48px, black 49px);
-  }
+  } */
 }
 
 /* Responsive - Mobile */
