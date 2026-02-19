@@ -2029,6 +2029,35 @@
   }
 }
 
+/* Mobile responsive for Why TDS Is Different */
+@media (max-width: 768px) {
+  .mk-different .mk-section-header {
+    margin-bottom: 24px;
+  }
+  
+  .mk-different-card {
+    padding: 24px !important;
+  }
+  
+  .mk-different-icon {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  
+  .mk-different-icon img {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  
+  .mk-different-title {
+    font-size: 24px !important;
+  }
+  
+  .mk-different-desc {
+    font-size: 14px;
+  }
+}
+
 /* ==========================================
    WHY TDS IS DIFFERENT SECTION
    ========================================== */
