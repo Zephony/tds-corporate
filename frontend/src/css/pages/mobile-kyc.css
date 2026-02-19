@@ -92,6 +92,28 @@
   width: auto;
 }
 
+@media (max-width: 768px) {
+  .mk-carrier-logos {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 56px;
+    margin-top: 40px;
+  }
+
+  .mk-carrier-logo {
+    width: 100%;
+  }
+
+  .mk-carrier-logo img {
+    max-height: 100px;
+    margin: 0 auto;
+  }
+
+  .mk-carrier-logo img[alt='Vodafone'] {
+    max-height: 100px;
+  }
+}
+
 .mk-carrier-footer {
   text-align: center;
   font-size: 18px;
