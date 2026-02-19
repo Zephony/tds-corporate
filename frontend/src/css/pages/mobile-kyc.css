@@ -953,7 +953,7 @@
   
   .mk-onboarding-card {
     padding: 28px 20px;
-    min-height: 180px;
+    min-height: 200px;
   }
   
   .mk-onboarding-num {
@@ -1001,7 +1001,7 @@
 @media (max-width: 768px) {
   .mk-onboarding-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 24px;
     max-width: 500px;
   }
   
@@ -1012,28 +1012,38 @@
   
   .mk-onboarding-card {
     padding: 24px 20px;
-    min-height: auto;
-    -webkit-mask-image: none;
-    mask-image: none;
+    border: 1px solid #ECF2FC;
+    /* min-height: auto; */
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
   }
   
   .mk-onboarding-center-icon {
     display: none;
   }
   
-  .mk-onboarding-card-title {
-    font-size: 16px;
+  .mk-onboarding-card-title,
+  .mk-onboarding-card-title-three {
+    font-size: 24px;
+    margin: 0 0 16px 0;
+    padding-left: 0;
   }
   
   .mk-onboarding-num {
-    font-size: 32px;
-    top: 12px;
-    right: 12px;
+    display: block;
+    font-size: 72px;
+    top: 0;
+    left: auto;
+    right: 0;
+    color: #0b5dd838;
+    opacity: 0.3;
+    -webkit-text-stroke: 0;
   }
 
   .mk-onboarding-card:nth-child(3) .mk-onboarding-num {
-    top: 12px;
-    right: 12px;
+    top: 0;
+    left: auto;
+    right: 0;
   }
 }
 
