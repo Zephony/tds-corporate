@@ -280,7 +280,7 @@
   background: #ffffff;
   display: flex;
   flex-direction: column;
-  margin: 0 16px;
+  margin: 0 10px;
   border-radius: 24px;
 }
 
@@ -303,9 +303,9 @@
   border-top: none;
 }
 
-.mk-mobile-menu-list li:last-child {
+/* .mk-mobile-menu-list li:last-child {
   border-bottom: none;
-}
+} */
 
 .mk-mobile-menu-list li a {
   display: block;
@@ -324,7 +324,7 @@
 
 /* Mobile CTA button inside menu content */
 .mk-mobile-menu-content > .mk-mobile-cta {
-  margin: 8px 24px 24px;
+  margin: 24px 24px;
   width: calc(100% - 48px);
 }
 
