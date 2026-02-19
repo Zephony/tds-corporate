@@ -502,6 +502,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   padding: 10px 12px;
   border-radius: 12px;
   font-size: 15px;
@@ -513,6 +514,12 @@
   cursor: pointer;
   /* box-shadow: 0 4px 12px rgba(27, 92, 255, 0.25); */
   transition: none;
+}
+
+.mk-btn-primary svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 
 .mk-btn-secondary {
@@ -1755,7 +1762,9 @@
 }
 
 .mk-pricing-btn-primary {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   width: max-content;
   padding: 12px 24px;
   background: #0B5DD8;
@@ -1767,6 +1776,12 @@
   border-radius: 12px;
   margin: 0px 0 24px 0;
   transition: background 0.2s ease;
+}
+
+.mk-pricing-btn-primary svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 
 .mk-pricing-btn-primary:hover {
@@ -2281,6 +2296,20 @@
     max-height: 100px;
   }
   
+  .mk-carrier-subtitle {
+    font-size: 16px;
+  }
+
+  .mk-carrier-footer {
+    margin: 24px auto 0;
+    font-size: 14px;
+  }
+  
+  .mk-pill {
+    font-size: 13px;
+    color: #333333;
+  }
+  
   /* Onboarding Section */
   .mk-onboarding-grid {
     grid-template-columns: 1fr;
@@ -2306,8 +2335,8 @@
   
   .mk-onboarding-card-title,
   .mk-onboarding-card-title-three {
-    font-size: 24px;
-    margin: 0 0 16px 0;
+    font-size: 20px;
+    margin: 0 0 12px 0;
     padding-left: 0;
   }
   
@@ -2328,9 +2357,13 @@
     right: 0;
   }
   
+  .mk-onboarding-card-desc {
+    font-size: 15px;
+  }
+  
   /* Feature Cards */
   .mk-section-subtitle {
-    font-size: 18px;
+    font-size: 16px;
   }
   
   .mk-feature-card {
@@ -2372,7 +2405,7 @@
   }
   
   .mk-feature-card-subtitle {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.6;
     margin: 0 0 12px 0;
   }
@@ -2423,12 +2456,13 @@
   }
   
   .mk-matters-intro {
-    font-size: 18px;
+    font-size: 15px;
   }
   
   .mk-matters-grid {
     grid-template-columns: 1fr;
     gap: 24px;
+    margin-bottom: 24px;
   }
   
   .mk-matters-column {
@@ -2436,11 +2470,17 @@
   }
   
   .mk-matters-text {
-    font-size: 18px;
+    font-size: 15px;
+  }
+  
+  .mk-matters-icon svg,
+  .mk-matters-icon img {
+    width: 24px;
+    height: 24px;
   }
   
   .mk-matters-footer {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.6;
   }
   
@@ -2457,6 +2497,7 @@
     grid-template-columns: 1fr;
     padding: 0;
     gap: 16px;
+    margin-bottom: 24px;
   }
   
   .mk-policy-audit-item {
@@ -2464,15 +2505,16 @@
   }
   
   .mk-policy-audit-text {
-    font-size: 16px;
+    font-size: 15px;
   }
   
   .mk-policy-audit-footer-text {
-    font-size: 18px;
+    font-size: 14px;
+    margin:0 0 24px;
   }
   
   .mk-policy-audit-disclaimer {
-    font-size: 18px;
+    font-size: 14px;
   }
   
   /* Common Gaps Section */
@@ -2491,7 +2533,7 @@
   }
   
   .mk-section-subtitle-light {
-    font-size: 18px;
+    font-size: 16px;
   }
   
   .mk-gaps-pill {
@@ -2501,7 +2543,7 @@
   }
   
   .mk-gaps-card-title {
-    font-size: 18px;
+    font-size: 15px;
     margin-bottom: 24px;
     font-weight: 400;
     line-height: 1.6;
@@ -2524,11 +2566,11 @@
   }
   
   .mk-gaps-text {
-    font-size: 16px;
+    font-size: 15px;
   }
   
   .mk-gaps-text-light {
-    font-size: 16px;
+    font-size: 15px;
   }
   
   /* Why TDS Is Different Section */
@@ -2537,7 +2579,7 @@
   }
   
   .mk-different-card {
-    padding: 24px !important;
+    padding: 20px !important;
   }
   
   .mk-different-icon {
@@ -2551,7 +2593,7 @@
   }
   
   .mk-different-title {
-    font-size: 24px !important;
+    font-size: 20px !important;
   }
   
   .mk-different-desc {
@@ -2616,10 +2658,31 @@
     grid-template-columns: 1fr;
   }
   
+  .mk-pricing-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .mk-pricing-btn-primary svg {
+    width: 16px;
+    height: 16px;
+    margin-top: 1px;
+  }
+  
   /* Integrations Section */
   .mk-integrations-cta .mk-btn-primary {
     padding: 12px 24px;
     font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .mk-integrations-cta .mk-btn-primary svg {
+    width: 16px;
+    height: 16px;
+    margin-top: 1px;
   }
   
   .mk-integrations-image {
@@ -2627,6 +2690,10 @@
   }
   
   /* General Layout */
+  .mk-hero {
+    padding: 16px 0;
+  }
+  
   .mk-section .mk-container,
   .mk-carrier-strip .mk-container,
   .mk-hero .mk-container {
@@ -2663,17 +2730,46 @@
   .mk-footer-grid {
     grid-template-columns: 1fr;
     gap: 40px;
+    margin-bottom: 12px;
   }
   
   .mk-footer-links {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
   }
+  
+  .mk-footer-column:nth-child(1) {
+    order: 1; /* Product */
+  }
+  
+  .mk-footer-column:nth-child(2) {
+    order: 3; /* Resources */
+  }
+  
+  .mk-footer-column:nth-child(3) {
+    order: 2; /* Company */
+  }
+  
+  .mk-footer-column:nth-child(4) {
+    order: 4; /* Other options (Actions) */
+  }
+  
+  .mk-footer-column h4 {
+    font-size: 14px;
+  }
+
+  .mk-footer-column a {
+    font-size: 14px;
+  }
 
   .mk-footer-bottom-links {
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 24px;
+  }
+
+  .mk-footer-bottom-links a {
+    font-size: 14px;
   }
   
   .mk-diagram {

@@ -527,7 +527,12 @@ export default function MobileKycPage() {
                   </ul>
                 </div>
 
-                <a href="#" className="mk-pricing-btn-primary">£0.35/per check →</a>
+                <a href="#" className="mk-pricing-btn-primary">
+                  £0.35/per check
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 10H16M16 10L12 6M16 10L12 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </a>
 
                 <div className="mk-pricing-section">
                   <h4 className="mk-pricing-section-title">Why teams choose this</h4>
@@ -564,7 +569,12 @@ export default function MobileKycPage() {
                   </ul>
                 </div>
 
-                <a href="#" className="mk-pricing-btn-primary">£0.45/per check →</a>
+                <a href="#" className="mk-pricing-btn-primary">
+                  £0.45/per check
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 10H16M16 10L12 6M16 10L12 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </a>
 
                 <div className="mk-pricing-section">
                   <h4 className="mk-pricing-section-title">Good to know</h4>
@@ -605,7 +615,12 @@ export default function MobileKycPage() {
             </div>
           </div>
           <div className="mk-integrations-cta">
-            <a href="#" className="mk-btn-primary">View Developer Docs →</a>
+            <a href="#" className="mk-btn-primary">
+              View Developer Docs
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 10H16M16 10L12 6M16 10L12 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
           </div>
           <div className="mk-integrations-image">
             <img src="/integration-image.svg" alt="API Integration Documentation" />
