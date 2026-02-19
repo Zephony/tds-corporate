@@ -1452,7 +1452,7 @@
   }
   
   .mk-feature-list li {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.6;
   }
   
@@ -1462,12 +1462,12 @@
   }
   
   .mk-feature-bullets li {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.6;
   }
   
   .mk-feature-text {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.6;
     margin: 0 0 12px 0;
   }
@@ -1640,9 +1640,31 @@
     padding: 32px 24px;
   }
   
+  .mk-why-matters .mk-container::after {
+    width: 100%;
+    opacity: 0.3;
+  }
+  
+  .mk-matters-intro {
+    font-size: 18px;
+  }
+  
   .mk-matters-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 24px;
+  }
+  
+  .mk-matters-column {
+    gap: 24px;
+  }
+  
+  .mk-matters-text {
+    font-size: 18px;
+  }
+  
+  .mk-matters-footer {
+    font-size: 18px;
+    line-height: 1.6;
   }
   
   .mk-matters-card::before {
