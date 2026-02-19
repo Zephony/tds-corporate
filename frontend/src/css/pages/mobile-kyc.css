@@ -1397,6 +1397,10 @@
 }
 
 @media (max-width: 768px) {
+  .mk-section-subtitle {
+    font-size: 18px;
+  }
+  
   .mk-feature-card {
     margin: 0 0 24px 0;
     border-radius: 16px;
@@ -1640,6 +1644,10 @@
     padding: 32px 24px;
   }
   
+  .mk-why-matters .mk-section-header {
+    margin-bottom: 24px;
+  }
+  
   .mk-why-matters .mk-container::after {
     width: 100%;
     opacity: 0.3;
@@ -1762,8 +1770,30 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .mk-policy-audit .mk-section-header {
+    margin-bottom: 32px;
+  }
+  
   .mk-policy-audit-grid {
     grid-template-columns: 1fr;
+    padding: 0;
+    gap: 16px;
+  }
+  
+  .mk-policy-audit-item {
+    padding: 24px;
+  }
+  
+  .mk-policy-audit-text {
+    font-size: 16px;
+  }
+  
+  .mk-policy-audit-footer-text {
+    font-size: 18px;
+  }
+  
+  .mk-policy-audit-disclaimer {
+    font-size: 18px;
   }
 }
 
