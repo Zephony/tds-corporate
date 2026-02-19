@@ -2332,12 +2332,53 @@
     padding: 48px 24px;
   }
   
+  .mk-pricing-wrapper .mk-section-header {
+    margin-bottom: 24px;
+  }
+  
   .mk-pricing-cards {
     grid-template-columns: 1fr;
   }
   
   .mk-pricing-card {
-    padding: 24px;
+    padding: 20px;
+  }
+  
+  .mk-pricing-badge {
+    padding: 8px 16px;
+    font-size: 12px;
+    top: 24px;
+    right: 12px;
+  }
+  
+  .mk-pricing-name {
+    font-size: 24px;
+  }
+  
+  .mk-pricing-subtitle {
+    font-size: 12px;
+    margin: 0 0 20px 0;
+  }
+  
+  .mk-pricing-section-title {
+    margin: 0 0 16px 0;
+  }
+  
+  .mk-pricing-list {
+    gap: 12px;
+  }
+  
+  .mk-pricing-list li {
+    font-size: 15px;
+  }
+  
+  .mk-pricing-disclaimer {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .mk-pricing-includes-title {
+    font-size: 18px;
   }
   
   .mk-pricing-includes-grid {
