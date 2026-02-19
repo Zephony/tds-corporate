@@ -306,7 +306,19 @@
 /* Mobile Header Responsive */
 @media (max-width: 980px) {
   .mk-site-header {
-    padding: 16px 24px 0 24px;
+    padding: 16px 24px;
+    background: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px 0 #00000010
+  }
+  
+  /* Add padding to page to compensate for fixed header */
+  .mk-page {
+    padding-top: 80px;
   }
   
   .mk-site-header-inner {
@@ -314,7 +326,12 @@
   }
   
   .mk-hero-logo img {
-    height: 32px;
+    height: 40px;
+  }
+  
+  /* Increase Talk to Sales font size on mobile */
+  .mk-mobile-talk-to-sales {
+    font-size: 16px;
   }
   
   /* Hide all navigation on mobile */
@@ -330,6 +347,11 @@
   .mk-hero-header-right .mk-hero-nav-right {
     display: flex;
     gap: 0;
+  }
+  
+  .mk-hero-header-right .mk-hero-nav-right li:first-child {
+    font-size: 18px;
+    font-weight: 500;
   }
   
   .mk-hero-header-right .mk-hero-nav-right li:not(:first-child) {
