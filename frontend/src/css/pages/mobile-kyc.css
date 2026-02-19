@@ -551,7 +551,14 @@
   font-size: 16px;
   color: #ffffff;
   background: #0B5DD8;
+  gap: 8px;
   /* box-shadow: 0 8px 20px rgba(11, 93, 216, 0.3); */
+}
+
+.btn-hero-primary svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 
 .btn-hero-primary:hover {
@@ -582,16 +589,23 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 24px;
+  padding: 12px 24px;
   border-radius: 12px;
   font-size: 16px;
   font-weight: 600;
   color: #0B5DD8;
   background: #ffffff;
   text-decoration: none;
-  border: 1px solid #0B5DD8;
+  border: 2px solid #0B5DD8;
   cursor: pointer;
   transition: none;
+  gap: 8px;
+}
+
+.mk-btn-secondary svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 
 /* Hero Visual - Right Column */
@@ -2388,7 +2402,7 @@
   .mk-section .mk-container,
   .mk-carrier-strip .mk-container,
   .mk-hero .mk-container {
-    padding: 48px 32px;
+    padding: 32px 24px;
     margin: 0 16px;
     width: calc(100% - 32px);
   }

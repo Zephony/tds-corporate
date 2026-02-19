@@ -25,8 +25,18 @@ export default function MobileKycPage() {
             </p>
             
             <div className="mk-hero-buttons">
-              <a href="#" className="btn btn-hero-primary">Get Started → </a>
-              <a href="#" className="mk-btn-secondary">View API Docs → </a>
+              <a href="#" className="btn btn-hero-primary">
+                Get Started
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 10H16M16 10L12 6M16 10L12 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
+              <a href="#" className="mk-btn-secondary">
+                View API Docs
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 10H16M16 10L12 6M16 10L12 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
             </div>
           </div>
           <div className="mk-hero-visual">
