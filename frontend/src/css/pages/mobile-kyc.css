@@ -2627,7 +2627,6 @@
   
   .mk-gaps-item {
     gap: 24px;
-    align-items: center;
   }
   
   .mk-gaps-text {
