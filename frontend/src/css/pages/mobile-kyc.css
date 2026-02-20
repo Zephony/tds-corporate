@@ -284,17 +284,15 @@
 
 /* Mobile Menu Content */
 .mk-mobile-menu-content {
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  padding: 0;
+  padding: 0 0 10px 0;
   background: #ffffff;
   display: flex;
   flex-direction: column;
   margin: 0 10px 10px 10px;
   border-radius: 24px;
-  min-height: 200px;
-  max-height: calc(100vh - 100px);
   position: relative;
   z-index: 1;
   -webkit-transform: translateZ(0);
@@ -314,7 +312,7 @@
   display: flex;
   flex-direction: column;
   gap: 0;
-  flex: 1 1 auto;
+  flex: 0 0 auto;
   position: relative;
   z-index: 1;
   background: #ffffff;
