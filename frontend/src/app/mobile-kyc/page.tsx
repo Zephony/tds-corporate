@@ -623,7 +623,14 @@ export default function MobileKycPage() {
             </a>
           </div>
           <div className="mk-integrations-image">
-            <img src="/integration-image.svg" alt="API Integration Documentation" />
+            <picture>
+              <source 
+                media="(max-width: 768px)" 
+                srcSet="/integration-image-mobile.webp" 
+                type="image/webp"
+              />
+              <img src="/integration-image.svg" alt="API Integration Documentation" />
+            </picture>
           </div>
         </div>
       </section>
