@@ -2270,6 +2270,10 @@
   
   .mk-hero-logo img {
     height: 40px;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
   }
   
   .mk-mobile-talk-to-sales {
@@ -2760,6 +2764,14 @@
     border-radius: 8px;
   }
   
+  .mk-integrations-image img {
+    image-rendering: -webkit-optimize-contrast;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
+  }
+  
   /* General Layout */
   .mk-hero {
     padding: 16px 0;
@@ -2831,6 +2843,13 @@
 
   .mk-footer-column a {
     font-size: 14px;
+  }
+  
+  .mk-footer-logo img {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
   }
 
   .mk-footer-bottom-links {
