@@ -974,7 +974,7 @@
 
 .mk-feature-list li {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
   font-size: 16px;
   color: #333333;
@@ -1546,7 +1546,7 @@
 
 .mk-gaps-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 16px;
 }
 
@@ -1578,8 +1578,8 @@
 }
 
 .mk-gaps-icon-check img {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   display: block;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
@@ -2487,6 +2487,11 @@
   .mk-feature-list li {
     font-size: 16px;
     line-height: 1.6;
+    align-items: flex-start;
+  }
+  
+  .mk-feature-list .mk-check-icon {
+    margin-top: -2px;
   }
   
   .mk-feature-bullets {
@@ -2627,10 +2632,12 @@
   
   .mk-gaps-item {
     gap: 24px;
+    align-items: flex-start;
   }
   
   .mk-gaps-text {
     font-size: 15px;
+    margin-top: -6px;
   }
   
   .mk-gaps-text-light {
