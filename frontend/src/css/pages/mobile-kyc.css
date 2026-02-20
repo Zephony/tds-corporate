@@ -983,11 +983,10 @@
 }
 
 .mk-check-icon {
-  width: 20px;
-  height: 20px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  width: 32px;
+  height: 32px;
+  display: block;
+  flex-shrink: 0;
 }
 
 .mk-check-icon img {
@@ -995,7 +994,6 @@
   height: 32px;
   display: block;
   flex-shrink: 0;
-  margin-top: 2px;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
   -webkit-backface-visibility: hidden;
@@ -1548,7 +1546,7 @@
 
 .mk-gaps-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 16px;
 }
 
@@ -2628,7 +2626,8 @@
   }
   
   .mk-gaps-item {
-    align-items: flex-start;
+    gap: 24px;
+    align-items: center;
   }
   
   .mk-gaps-text {
