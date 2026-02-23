@@ -752,8 +752,8 @@
   background: #ffffff;
   border: 2px solid #ECF2FC;
   border-radius: 16px;
-  padding: 0px 46px;
-  min-height: 320px;
+  padding: 72px 46px 0;
+  min-height: 230px;
   position: relative;
   z-index: 5;
   text-align: center;
@@ -762,13 +762,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 }
 
 /* Circular notch cut-out — card 1 (top-left): cut at bottom-right */
 .mk-onboarding-card:nth-child(1) {
   -webkit-mask-image: radial-gradient(circle at calc(100% + 12px) calc(100% + 12px), transparent 94px, black 95px);
   mask-image: radial-gradient(circle at calc(100% + 12px) calc(100% + 12px), transparent 94px, black 95px);
+}
+
+/* Card 1: Move number to left side */
+.mk-onboarding-card:nth-child(1) .mk-onboarding-num {
+  right: auto;
+  left: 0;
+  top: 0;
 }
 
 /* Circular notch cut-out — card 2 (top-right): cut at bottom-left */
@@ -783,10 +790,11 @@
   mask-image: radial-gradient(circle at calc(100% + 12px) calc(0% - 12px), transparent 94px, black 95px);
 }
 
-/* Card 3: Custom number positioning - slightly top and more toward center-left */
+/* Card 3: Move number to left side */
 .mk-onboarding-card:nth-child(3) .mk-onboarding-num {
-  top: 3%;
-  right: 9%;
+  right: auto;
+  left: 0;
+  top: 0;
 }
 
 /* Circular notch cut-out — card 4 (bottom-right): cut at top-left */
@@ -819,7 +827,7 @@
   font-size: 32px;
   font-weight: bold;
   color: #333333;
-  margin: 32px 0 16px 0;
+  margin: 0 0 16px 0;
   /* line-height: 1.25; */
   /* letter-spacing: 0.010em; */
 }
@@ -2125,7 +2133,7 @@
   
   .mk-onboarding-card {
     padding: 28px 20px;
-    min-height: 200px;
+    min-height: max-content;
   }
   
   .mk-onboarding-num {
@@ -2405,7 +2413,7 @@
   }
   
   .mk-onboarding-card {
-    padding: 24px 20px;
+    padding: 56px 20px 32px;
     border: 1px solid #ECF2FC;
     -webkit-mask-image: none !important;
     mask-image: none !important;
@@ -2424,19 +2432,19 @@
   
   .mk-onboarding-num {
     display: block;
-    font-size: 72px;
-    top: 0;
-    left: auto;
-    right: 0;
+    font-size: 56px;
+    top: -1%;
+    left: 0;
+    right: auto;
     color: #0b5dd838;
     opacity: 0.3;
     -webkit-text-stroke: 0;
   }
 
   .mk-onboarding-card:nth-child(3) .mk-onboarding-num {
-    top: 0;
-    left: auto;
-    right: 0;
+    top: -1%;
+    left: 0;
+    right: auto;
   }
   
   .mk-onboarding-card-desc {
