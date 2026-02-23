@@ -28,7 +28,12 @@ export default function SiteHeader() {
               <li>Login</li>
             </ul>
           </nav>
-          <a href="#" className="btn btn-nav-primary">
+          {/* Mobile-only Try for Free button */}
+          <a href="#" className="btn btn-nav-primary mk-mobile-try-free">
+            Try for Free
+          </a>
+          {/* Desktop Try for Free button */}
+          <a href="#" className="btn btn-nav-primary mk-desktop-try-free">
             Try for Free
           </a>
           <button 
@@ -50,7 +55,7 @@ export default function SiteHeader() {
           <div className="mk-mobile-menu-header">
             <div className="mk-hero-logo"><img src="/tds-logo.svg" alt="TDS" /></div>
             <div className="mk-mobile-menu-actions">
-              <span className="mk-mobile-talk-to-sales">Talk to Sales</span>
+              <a href="#" className="btn btn-nav-primary">Try for Free</a>
               <button 
                 className="mk-mobile-close"
                 aria-label="Close menu"

@@ -286,7 +286,7 @@ export default function MobileKycPage() {
                   <span className="mk-matters-icon">
                     <img src="/warning-icon.svg" alt="Warning" />
                   </span>
-                  <span className="mk-matters-text">Reputational and moral risk — especially when real people are affected</span>
+                  <span className="mk-matters-text">Incorrect account creation</span>
                 </div>
               </div>
               <div className="mk-matters-column">
@@ -300,7 +300,7 @@ export default function MobileKycPage() {
                   <span className="mk-matters-icon">
                     <img src="/warning-icon.svg" alt="Warning" />
                   </span>
-                  <span className="mk-matters-text">Incorrect account creation</span>
+                  <span className="mk-matters-text">Reputational and moral risk — especially when real people are affected</span>
                 </div>
               </div>
             </div>
@@ -342,7 +342,7 @@ export default function MobileKycPage() {
               This creates a clear, provable audit trail for internal review, partners, and third-party checks.
             </p>
             <p className="mk-policy-audit-disclaimer">
-              TDS does not assess full GDPR compliance.
+              The Data Supermarket does not assess full GDPR compliance.
             </p>
             <p className="mk-policy-audit-disclaimer">
               TDS enforces authorised disclosure and use conditions to protect networks, partners, and end users.

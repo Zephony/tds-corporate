@@ -509,6 +509,15 @@
   /* box-shadow: 0 4px 12px rgba(11, 93, 216, 0.3); */
 }
 
+/* Hide mobile button on desktop, show desktop button */
+.mk-mobile-try-free {
+  display: none;
+}
+
+.mk-desktop-try-free {
+  display: inline-flex;
+}
+
 /* Hero section primary button */
 .btn-hero-primary {
   padding: 16px 32px;
@@ -1843,7 +1852,7 @@
 }
 
 .mk-pricing-disclaimer {
-  font-size: 16px;
+  font-size: 14px;
   font-style: italic;
   color: #333333;
   text-align: left;
@@ -2280,31 +2289,36 @@
     font-size: 16px;
   }
   
+  .mk-mobile-menu-actions .btn-nav-primary {
+    padding: 8px 16px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  
   /* Hide all navigation on mobile */
   .mk-hero-nav {
     display: none;
   }
   
-  /* Show only Talk to Sales and Hamburger on mobile */
+  /* Show mobile Try for Free button, hide desktop button */
+  .mk-hero-header-right .mk-mobile-try-free {
+    display: inline-flex !important;
+    padding: 8px 16px;
+    font-size: 14px;
+    background: #0b5dd8;
+    color: #ffffff;
+  }
+  
+  .mk-hero-header-right .mk-desktop-try-free {
+    display: none !important;
+  }
+  
+  /* Header right section on mobile */
   .mk-hero-header-right {
     gap: 16px;
   }
   
   .mk-hero-header-right .mk-hero-nav-right {
-    display: flex;
-    gap: 0;
-  }
-  
-  .mk-hero-header-right .mk-hero-nav-right li:first-child {
-    font-size: 18px;
-    font-weight: 500;
-  }
-  
-  .mk-hero-header-right .mk-hero-nav-right li:not(:first-child) {
-    display: none;
-  }
-  
-  .mk-hero-header-right .btn-nav-primary {
     display: none;
   }
   
@@ -2565,16 +2579,35 @@
   .mk-policy-audit .mk-section-header {
     margin-bottom: 32px;
   }
+
+  .mk-policy-audit .mk-container::before {
+    width: 200px;
+    height: 450px;
+    opacity: 0.2;
+    filter: blur(150px);
+  }
   
   .mk-policy-audit-grid {
     grid-template-columns: 1fr;
     padding: 0;
-    gap: 16px;
+    gap: 24px;
     margin-bottom: 24px;
   }
   
   .mk-policy-audit-item {
     padding: 24px;
+    position: relative;
+  }
+  
+  .mk-policy-audit-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 24px;
+    background: #e2e8f0;
   }
   
   .mk-policy-audit-text {
@@ -2731,6 +2764,7 @@
   
   .mk-pricing-includes-grid {
     grid-template-columns: 1fr;
+    justify-items: center;
   }
   
   .mk-pricing-btn-primary {
