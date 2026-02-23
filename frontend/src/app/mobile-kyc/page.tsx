@@ -254,7 +254,7 @@ export default function MobileKycPage() {
               </div>
 
               <div className="mk-feature-card-visual">
-                <img src="/mobile-kyc.svg" alt="Mobile KYC Information" className="mk-feature-visual-img" />
+                <img src="/mobile-kycn.svg" alt="Mobile KYC Information" className="mk-feature-visual-img" />
               </div>
             </div>
           </div>
